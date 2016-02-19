@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/public.css "/>
+<link rel="stylesheet" href="css/list.css "/>
+<script src="js/base.js"></script>
+<script src="js/move.js"></script>
+<script src="js/public.js"></script>
+<script src="js/list.js"></script>
+
+<script>
+window.onload=function(){
+
+	meituan.public.header.headerT();
+	meituan.public.header.headerM();
+	meituan.list.add();
+	meituan.public.footer.tab();
+	meituan.public.navLi();
+	meituan.public.sider();
+	var oUp=document.getElementById('fixed_ul_Up');
+	var top1=getPos(oUp).top;
+	var oUp2=document.getElementById('fixed_top');
+	
+	meituan.public.fixedTop(oUp2,0);
+	var oJlookUp=document.getElementById('j-lookUp');
+	var top3=getPos(oJlookUp).top;
+	window.onscroll=window.onresize=function(){
+		
+		meituan.public.fixedUp(oUp,top1);
+		meituan.public.fixedUp(oJlookUp,top3);
+	};
+	meituan.list.onload();
+	meituan.list.hostory();
+}
+</script>
+</head>
+
+<body>
+<div class="header">
+			<div class="header_t">
+				<div class="header_t_cont clearfix" id="header_t_div">
+					<ul class="header_t_list left" id="j-header-ul">
+						<li class="header_t_list_li1"><a href="#"><b></b>收藏美团</a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li2"><a href="#">登录</a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li3"><a href="#">注册<i></i></a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li4" id="j-phone">
+							<a href="#"><b></b>手机美团<span class="triangle"></span></a>
+							<div class="j_phone_Hide">
+								<ul class="listChild_hide">
+									<li><a href="#"></a></li>
+									<li></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					
+					<ul class="header_t_r right">
+						<li class="first"><a href="#">我的订单</a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li3">
+							<a href="#">我的美团<span class="triangle"></span> <i></i></a>
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list1">
+									<li><a href="#">我的订单</a></li>
+									<li><a href="#">我的评价</a></li>
+									<li><a href="#">我的收藏</a></li>
+									<li><a href="#">我的积分</a></li>
+									<li><a href="#">抵用券</a></li>
+									<li><a href="#">美团余额</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="header_t_list_li3">
+							<a href="#">最近浏览<span class="triangle"></span> <i></i></a>
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list2">
+									
+								</ul>
+							</div>
+						</li>
+						<li class="header_t_list_li3">
+							<a href="#"><b></b>购物车0件<span class="triangle"></span><i></i></a>
+							
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list3">
+								
+								</ul>
+							</div>
+							
+						</li>
+	</a></li>
+						<li class="header_t_list_li3">
+							<a href="#">我是商家<span class="triangle"></span> <i></i></a>
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list4">
+									<li><a href="#">登录商家中心</a></li>
+									<li><a href="#">我想合作</a></li>
+									<li><a href="#">手机免费开店</a></li>
+								
+								</ul>
+							</div>
+						</li>
+						<li class="last"><a href="#">更多<span class="triangle"></span></a><div class="j_phone_Hide">adfdf徐晓飞股份公司打官司</div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="header_m">
+				<div class="header_m_img">
+					<span class="header_m_close" id="header_m_close"></span>
+				</div>
+				<div class="header_m_cont clearfix">
+					<h1 class="left">美团</h1>
+						<div class="header_m_cont_l left">
+							<span class="header_m_cont_l_span">北京</span><i class="header_m_cont_i">切换城市</i>
+						</div>
+					<div class="left clearfix" id="j-headerM-input">
+							<div class="left header_m_cont_m " id="j-headerM-C">
+								<span class="header_m_cont_m_spanl">团购<span class="triangle"></span></span>
+								<span class="header_m_cont_m_spanr">请输入商品名、地址等</span>
+							</div>
+							<div class="left j_btn" id="j-headerM-B">搜索</div>
+								<input type="text"  name="txt"/>
+								<input type="button" name="search" value="搜索"/>
+					</div>
+					<div class="right">
+							<ul class="header_m_cont_r_list">
+								<li><i class="il"></i><b>随时退</b></li>
+								<li><i class="im"></i><b>不满意免单</b></li>
+								<li><i class="ir"></i><b>过期退</b></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="header_b">
+				<div class="nav clearfix">
+					<div class="nav_l left" id="navLi">全部分类
+						<div class="one_l left" id="one_l">
+							<ul class="one_list" id="j_one_list">
+								<li class="clearfix">
+									<span class="one_list_span left">美食</span>
+									<div class="right"><a href="#">自助餐</a><a href="#">代金券</a>
+										<i class="icon_right" ></i>
+									</div>
+									<div class="bottom_b"></div>
+									<div class="one_list_hide">
+										<h3>美食</h3>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+									</div>
+									
+								</li>
+								<li class="clearfix"><span class="one_list_span left">酒店/客栈</span><div class="right"><a href="#">经济型酒店</a><i class="icon_right" ></i></div><div class="bottom_b"></div>
+								<div class="one_list_hide">
+									<h3>酒店</h3>
+										<a href="#">经济型酒店</a>
+										<a href="#">豪华型酒店</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+								</div></li>
+								<li class="clearfix"><span class="one_list_span left">电影/在线选座</span><div class="right"><i class="icon_right" ></i></div><div class="bottom_b"></div>
+								<div class="one_list_hide">
+										<h3>热映电影</h3>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+								</div></li>
+								<li class="clearfix"><span class="one_list_span left">美食</span><div class="right"></div><div class="bottom_b"></div></li>
+								<li class="clearfix"><span class="one_list_span left">休闲娱乐</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">3</div></li>
+								<li class="clearfix"><span class="one_list_span left">美食</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">4</div></li>
+								<li class="clearfix"><span class="one_list_span left">美食</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">55</div></li>
+								<li class="clearfix"><span class="one_list_span left">购物</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">6</div></li>
+								<li class="clearfix last"><span class="one_list_span left">丽人</span><div class="right"></div><div class="bottom_b"></div></li>
+								
+							</ul>
+						</div>
+					</div>
+					<ul class="nav_r right" id="nav">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="list.html">今日新单</a></li>
+						<li><a href="#">购物</a></li>
+						<li><a href="#">身边外卖</a></li>
+						<li><a href="#">名店抢购</a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		
+	<div class="wrapper">
+		<div class="content">
+			<div class="content_list clearfix" id="content_list_cont">
+				<div class="bor_green">全部<i></i></div>
+				
+				<!--<div class="content_addChild">
+					<span class="icon_right content_list_span"></span>
+					<div class="bor_green">区域:<span>海淀区</span><i class="triangle"></i>
+						<div class="address">
+							<a href="#">东城区</a>
+							<a href="#">西城区</a>
+							<a href="#">石景山区</a>
+							<a href="#">昌平区</a>
+							<a href="#">朝阳区</a>
+						</div>
+					</div><b class="liClose"></b>
+				</div>
+				<div class="content_addChild">
+					<span class="icon_right content_list_span"></span>
+					<div class="bor_green">商圈：中关村<i class="triangle"></i><i></i></div><b class="liClose"></b>
+				</div>-->
+				
+			</div>
+			<div class="content_b">
+				<p>分类:</p><a href="#" id="content_btn1">全部</a><a href="#" id="content_btn2">区域</a><a href="#" id="content_btn3">商圈</a><a href="#" id="content_btn4">价钱</a>
+			</div>
+		</div>
+		
+		<div class="content_two">
+			<ul class="two_list clearfix">
+				<li class="two_list_first active">默认</li>
+				<li>销量<i class="down"></i></li>
+				<li>销量<i class="down"></i></li>
+				<li>销量<i class="down"></i></li>
+				<li>销量<i class="down"></i></li>
+			</ul>
+		</div>
+		
+		<div class="content_three clearfix">
+			<ul class="list left clearfix" id="three_UL">
+				<li>
+					<a href="detailed.html">
+						<img src="images/22.jpg">
+					<h2 class="list_h2">【劲松】MiniMe特色太空舱主题酒店</h2>
+					<h4 class="list_h4">建业MINI放入住1晚</h4>
+					<div class="main clearfix">
+					<strong class="list_strong">￥58</strong>
+					<span class="list_lspan">门店价</span>
+					<i class="list_i">￥68</i>
+					<span class="list_rspan">已售255</span>
+					</div><div class="mainlast clearfix">
+						<img src="images/27.png">
+						<b class="list_b">1516人评价</b>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/25.jpg">
+					<h2 class="list_h2">【劲松】MiniMe特色太空舱主题酒店</h2>
+					<h4 class="list_h4">建业MINI放入住1晚</h4>
+					<div class="main clearfix">
+					<strong class="list_strong">￥58</strong>
+					<span class="list_lspan">门店价</span>
+					<i class="list_i">￥68</i>
+					<span class="list_rspan">已售255</span>
+					</div><div class="mainlast clearfix">
+						<img src="images/27.png">
+						<b class="list_b">1516人评价</b>
+					</div>
+					</a>
+				</li>
+				<li>
+					<img src="images/22.jpg">
+					<h2 class="list_h2">【劲松】MiniMe特色太空舱主题酒店</h2>
+					<h4 class="list_h4">建业MINI放入住1晚</h4>
+					<div class="main clearfix">
+					<strong class="list_strong">￥58</strong>
+					<span class="list_lspan">门店价</span>
+					<i class="list_i">￥68</i>
+					<span class="list_rspan">已售255</span>
+					</div><div class="mainlast clearfix">
+						<img src="images/27.png">
+						<b class="list_b">1516人评价</b>
+					</div>
+				</li>
+				<li>
+					<img src="images/25.jpg">
+					<h2 class="list_h2">【劲松】MiniMe特色太空舱主题酒店</h2>
+					<h4 class="list_h4">建业MINI放入住1晚</h4>
+					<div class="main clearfix">
+					<strong class="list_strong">￥58</strong>
+					<span class="list_lspan">门店价</span>
+					<i class="list_i">￥68</i>
+					<span class="list_rspan">已售255</span>
+					</div><div class="mainlast clearfix">
+						<img src="images/27.png">
+						<b class="list_b">1516人评价</b>
+					</div>
+				</li>
+				<li>
+					<img src="images/22.jpg">
+					<h2 class="list_h2">【劲松】MiniMe特色太空舱主题酒店</h2>
+					<h4 class="list_h4">建业MINI放入住1晚</h4>
+					<div class="main clearfix">
+					<strong class="list_strong">￥58</strong>
+					<span class="list_lspan">门店价</span>
+					<i class="list_i">￥68</i>
+					<span class="list_rspan">已售255</span>
+					</div><div class="mainlast clearfix">
+						<img src="images/27.png">
+						<b class="list_b">1516人评价</b>
+					</div>
+				</li>
+				<li>
+					<img src="images/25.jpg">
+					<h2 class="list_h2">【劲松】MiniMe特色太空舱主题酒店</h2>
+					<h4 class="list_h4">建业MINI放入住1晚</h4>
+					<div class="main clearfix">
+					<strong class="list_strong">￥58</strong>
+					<span class="list_lspan">门店价</span>
+					<i class="list_i">￥68</i>
+					<span class="list_rspan">已售255</span>
+					</div><div class="mainlast clearfix">
+						<img src="images/27.png">
+						<b class="list_b">1516人评价</b>
+					</div>
+				</li>
+						
+			</ul>
+			<div class="content_three right">
+				<ul class="content_three_list">
+					<li><img src="images/31.jpg"></li>
+					<li class="content_three_list_last"><img src="images/33.jpg"></li>
+				</ul>
+				<ul class="content_three_list">
+					<li><img src="images/31.jpg"></li>
+					<li class="content_three_list_last"><img src="images/33.jpg"></li>
+				</ul>
+				<ul class="content_three_list content_three_list2">
+					<li class="three_list2">
+						<img src="images/5.png" />
+					</li>
+				</ul>
+				<ul class="content_three_list">
+					<li><img src="images/31.jpg"></li>
+					<li class="content_three_list_last"><img src="images/33.jpg"></li>
+				</ul>
+				
+				<ul class="content_three_list" id="j-lookUp">
+					<li class="three_lilast three_lilast1">
+						<div class="clearfix">
+							<strong class="left three_spanL">最近浏览</strong>
+							<span class="right three_spanR">清空</span>
+						</div>
+						
+						<div class="three_div clearfix">
+							
+							<ul id="history_ul">
+								
+							</ul>
+							
+						</div>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	
+		<div class="footer"> 
+			<div class="footer_main clearfix">
+				<ul class="footer_t clearfix" id="footer_btn">
+					<li class="active">团购分类</li>
+					<li>热门地标</li>
+					<li>热门团购</li>
+					<li>精品推荐</li>
+					<li>美食美团</li>
+					
+				</ul>
+				<ul class="footer_c clearfix" id="footer_cont">
+					<li class="active"><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a></li>
+					<li><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a></li>
+					<li><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a></li>
+					<li><a href="#">购物团购</a><a href="#">购物团购</a><a href="#">购物团购</a><a href="#">休闲娱乐团购</a><a href="#">购物团购</a><a href="#">休闲娱乐团购</a><a href="#">购物团购</a><a href="#">购物团购</a><a href="#">购物团购</a></li>
+					<li><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a></li>
+					
+				</ul>
+			</div>
+			<div class="footer_middle clearfix">
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				
+				<div class="left footer_middle_r">
+					<div>
+						<p  class="footer_m_p1">客服电话</p>
+						<p  class="footer_m_p2">400-600-5352</p>
+					</div>
+					<div class="footer_m_r2">
+						<p>退款、退换货、查看美团券</p>
+						<a href="#">参考教程，轻松搞定</a>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="footer_bottom">
+				<span>&copy;美团网团购 meituan.com 京ICP证0707971号，京公网安备1101050225545号 电子公告服务规则</span>
+			</div>
+			
+		</div>
+		
+	<div class="position_right" id="fixed_ul_Up"><i class="close" id="close"></i></div>
+	
+	<ul class="fixed" >
+		<li class="fixed_right1">
+			<i></i>
+			<p>回到顶部</p>
+		</li>
+		<li class="fixed_right2"><i></i>
+			<p>回到顶部</p>
+		</li>
+		<li class="fixed_right3" id="fixed_top"><i></i><p>回到顶部</p></li>
+		<li class="fixed_right4"><i></i><p>回到顶部</p></li>
+	</ul>
+</body>
+</html>

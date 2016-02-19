@@ -1,0 +1,585 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/public.css "/>
+<link rel="stylesheet" href="css/detailed.css "/>
+<script src="js/base.js"></script>
+<script src="js/public.js"></script>
+<script src="js/detailed.js"></script>
+
+<script>
+window.onload=function(){
+	meituan.public.header.headerT();
+	meituan.public.header.headerM();
+	meituan.detailed.tab();
+	meituan.detailed.num();
+	var oTop=document.getElementById('fixed_top');
+	meituan.public.fixedTop(oTop,0);
+	meituan.public.footer.tab();
+	meituan.public.navLi();
+	meituan.public.sider();
+	meituan.detailed.lookTop();
+	var oUp=document.getElementById('fixed_ul_Up');
+	var top1=getPos(oUp).top;
+	var oBarTop=document.getElementById('li3Ul');
+	var top2=getPos(oBarTop).top;
+	var oJlookUp=document.getElementById('j-lookUp');
+	var top3=getPos(oJlookUp).top;
+	
+	//meituan.public.fixedTop();
+	window.onscroll=window.onresize=function(){
+		
+		meituan.public.fixedUp(oUp,top1);
+		meituan.public.fixedUp(oBarTop,top2);
+		meituan.public.fixedUp(oJlookUp,top3);
+		//meituan.public.fixedTop();
+	}
+}
+</script>
+
+</head>
+ 
+<body>
+<div class="header">
+			<div class="header_t">
+				<div class="header_t_cont clearfix" id="header_t_div">
+					<ul class="header_t_list left" id="j-header-ul">
+						<li class="header_t_list_li1"><a href="#"><b></b>收藏美团</a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li2"><a href="#">登录</a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li3"><a href="#">注册<i></i></a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li4" id="j-phone">
+							<a href="#"><b></b>手机美团<span class="triangle"></span></a>
+							<div class="j_phone_Hide">
+								<ul class="listChild_hide">
+									<li><a href="#"></a></li>
+									<li></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					
+					<ul class="header_t_r right">
+						<li class="first"><a href="#">我的订单</a><div class="j_phone_Hide"></div></li>
+						<li class="header_t_list_li3">
+							<a href="#">我的美团<span class="triangle"></span> <i></i></a>
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list1">
+									<li><a href="#">我的订单</a></li>
+									<li><a href="#">我的评价</a></li>
+									<li><a href="#">我的收藏</a></li>
+									<li><a href="#">我的积分</a></li>
+									<li><a href="#">抵用券</a></li>
+									<li><a href="#">美团余额</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="header_t_list_li3">
+							<a href="#">最近浏览<span class="triangle"></span> <i></i></a>
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list2">
+									
+								</ul>
+							</div>
+						</li>
+						<li class="header_t_list_li3">
+							<a href="#"><b></b>购物车0件<span class="triangle"></span><i></i></a>
+							
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list3">
+								
+								</ul>
+							</div>
+							
+						</li>
+	</a></li>
+						<li class="header_t_list_li3">
+							<a href="#">我是商家<span class="triangle"></span> <i></i></a>
+							<div class="j_phone_Hide">
+								<ul class="header_t_r_list4">
+									<li><a href="#">登录商家中心</a></li>
+									<li><a href="#">我想合作</a></li>
+									<li><a href="#">手机免费开店</a></li>
+								
+								</ul>
+							</div>
+						</li>
+						<li class="last"><a href="#">更多<span class="triangle"></span></a><div class="j_phone_Hide">adfdf徐晓飞股份公司打官司</div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="header_m">
+				<div class="header_m_img">
+					<span class="header_m_close" id="header_m_close"></span>
+				</div>
+				<div class="header_m_cont clearfix">
+					<h1 class="left">美团</h1>
+						<div class="header_m_cont_l left">
+							<span class="header_m_cont_l_span">北京</span><i class="header_m_cont_i">切换城市</i>
+						</div>
+					<div class="left clearfix" id="j-headerM-input">
+							<div class="left header_m_cont_m " id="j-headerM-C">
+								<span class="header_m_cont_m_spanl">团购<span class="triangle"></span></span>
+								<span class="header_m_cont_m_spanr">请输入商品名、地址等</span>
+							</div>
+							<div class="left j_btn" id="j-headerM-B">搜索</div>
+								<input type="text"  name="txt"/>
+								<input type="button" name="search" value="搜索"/>
+					</div>
+					<div class="right">
+							<ul class="header_m_cont_r_list">
+								<li><i class="il"></i><b>随时退</b></li>
+								<li><i class="im"></i><b>不满意免单</b></li>
+								<li><i class="ir"></i><b>过期退</b></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="header_b">
+				<div class="nav clearfix">
+					<div class="nav_l left" id="navLi">全部分类
+						<div class="one_l left" id="one_l">
+							<ul class="one_list" id="j_one_list">
+								<li class="clearfix">
+									<span class="one_list_span left">美食</span>
+									<div class="right"><a href="#">自助餐</a><a href="#">代金券</a>
+										<i class="icon_right" ></i>
+									</div>
+									<div class="bottom_b"></div>
+									<div class="one_list_hide">
+										<h3>美食</h3>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+									</div>
+									
+								</li>
+								<li class="clearfix"><span class="one_list_span left">酒店/客栈</span><div class="right"><a href="#">经济型酒店</a><i class="icon_right" ></i></div><div class="bottom_b"></div>
+								<div class="one_list_hide">
+									<h3>酒店</h3>
+										<a href="#">经济型酒店</a>
+										<a href="#">豪华型酒店</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+								</div></li>
+								<li class="clearfix"><span class="one_list_span left">电影/在线选座</span><div class="right"><i class="icon_right" ></i></div><div class="bottom_b"></div>
+								<div class="one_list_hide">
+										<h3>热映电影</h3>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+										<a href="#">甜点饮品</a>
+										<a href="#">海鲜</a>
+								</div></li>
+								<li class="clearfix"><span class="one_list_span left">美食</span><div class="right"></div><div class="bottom_b"></div></li>
+								<li class="clearfix"><span class="one_list_span left">休闲娱乐</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">3</div></li>
+								<li class="clearfix"><span class="one_list_span left">美食</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">4</div></li>
+								<li class="clearfix"><span class="one_list_span left">美食</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">55</div></li>
+								<li class="clearfix"><span class="one_list_span left">购物</span><div class="right"><a href="#">自助餐</a><a href="#">代金券</a><i class="icon_right" ></i></div><div class="bottom_b"></div><div class="one_list_hide">6</div></li>
+								<li class="clearfix last"><span class="one_list_span left">丽人</span><div class="right"></div><div class="bottom_b"></div></li>
+								
+							</ul>
+						</div>
+					</div>
+					<ul class="nav_r right" id="nav">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="list.html">今日新单</a></li>
+						<li><a href="#">购物</a></li>
+						<li><a href="#">身边外卖</a></li>
+						<li><a href="#">名店抢购</a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		
+	<div class="wrapper">
+		<div class="content">
+			<div class="content_list clearfix">
+				<div>全部<i></i></div>
+				<span class="icon_right content_list_span"></span>
+				<div>区域:<span>海淀区</span><i class="triangle"></i></div><b class="liClose"></b>
+				<span class="icon_right content_list_span"></span>
+				<div>商圈：中关村<i class="triangle"></i><i></i></div><b class="liClose"></b>
+			</div>
+			<div class="content_b">
+				<p>分类:</p><a href="#">全部</a><a href="#">美食</a><a href="#">全部</a><a href="#">美食</a>
+			</div>
+		</div>
+		
+		<div class="content_two">
+			<ul class="two_list clearfix">
+				<li class="two_list_first active">默认</li>
+				<li>销量<i class="down"></i></li>
+				<li>销量<i class="down"></i></li>
+				<li>销量<i class="down"></i></li>
+				<li>销量<i class="down"></i></li>
+			</ul>
+		</div>
+		
+		<div class="content_four clearfix">
+			<h3>【中关村】夜时尚</h3>
+				<p>仅售59元！价值126元的台球3小时，提供免费Wifi</p>
+			<div class="left four_left">
+			
+				<ul class="four_big" id="four_big">
+					<li class="active"><img src="images/64.jpg" /></li>
+					<li><img src="images/65.jpg" /></li>
+					<li><img src="images/66.jpg" /></li>
+					<li><img src="images/67.jpg" /></li>
+				</ul>
+				<ul class="four_small clearfix" id="four_small">
+					<li class="active"><img src="images/64.jpg" /></li>
+					<li><img src="images/65.jpg" /></li>
+					<li><img src="images/66.jpg" /></li>
+					<li><img src="images/67.jpg" /></li>
+				</ul>
+			</div>
+			<div class="right four_right">
+				<div class="four_r1 clearfix">
+					<span >团购价</span>
+					<i class="iBig">￥59 </i>
+					<span>门店价<b>￥125</b></span>
+				</div>
+				<ul class="four_r2 clearfix">
+					<li> <span>已售</span><i>2036</i></li>
+					<li> <i>4.1</i><span>分</span></li>
+					<li> <i>309</i><span>人评价</span></li>
+				</ul>
+				<div class="four_r3 clearfix">
+					<span>有效期</span>
+					<strong>截止到2016.01.19 </strong>
+					<i>周末、法定节假日通用</i>
+				</div>
+				<div class="four_r4 clearfix">
+					<span>数量</span>
+					<div class="right">
+						<span class="spanMin" id="min">-</span>
+						<span class="num" id="val">10</span>
+						<span class="spanMax" id="max">+</span>
+						<i>最少1起售</i>
+					</div>
+					
+				</div>
+				<div class="four_r5 clearfix">
+					<div>
+						<span class="buying">立即抢购</span>
+						<span class="shopping"></span>
+						<strong class="four_r5_strong1"><i></i>收藏</strong>
+						<strong class="four_r5_strong2"><i ></i>分享到</strong>
+					</div>
+				</div>
+				<div class="four_r6 clearfix">
+					<span>服务承诺</span>
+					<ul>
+						<li>随时退</li>
+						<li>过期退</li>
+						<li>急速退</li>
+						<li>真实评价</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="content_three clearfix">
+			<ul class="three_list left clearfix">
+				<li>
+					<div class="li1 clearfix">
+						<div class="li1Div"><i></i><p>重要通知</p></div>
+						<div class="li1Div2"><p>亲爱的用户，本次团购有效期延长至2016年01月19日，感谢您的支持，祝消费快乐</p></div>
+					</div>
+				</li>
+				<li>
+					<div class="li2">
+						<div class="li2T clearfix">
+							<h4>该商家的其他团购</h4>
+							<span>团购价</span>
+							<span>门店价</span>
+							<span class="li2TLast">已售</span>
+						</div>
+						
+						<div class="li2B clearfix">
+							<p>【中关村】台球畅达1小时，免费提供WiFi</p>
+							<i>￥20</i>
+							<b class="li2Bb">￥42</b>
+							<b>6743</b>
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul class="li3Ul" id="li3Ul">
+						<li class="active">商家位置</li>
+						<li>购买须知</li>
+						<li>本单详情</li>
+						<li>商家介绍</li>
+						<li>消费评价(398)</li>
+					</ul>
+				</li>
+				<li class="j_place">
+					<h3 class="li4H3">商家位置</h3>
+					<div class="li4Div clearfix">
+						<div class="left li4L"></div>
+						<div class="right li4R">
+							<p>夜时尚(中关村店)</p>
+							<div class="li4RDiv1 clearfix">
+								<span>评价：</span>
+								<b>4172人评价</b>
+								<em>4.3分 高于同行业6.7%</em>
+							</div>
+							<div class="li4RDiv2 clearfix">
+								<span>地址：</span>
+								<b>4172海淀区苏州街29号维亚大厦B1楼（苏州街地铁站北侧）</b>
+								<em><a href="#">查看地图 </a></em>
+							</div>
+							<div class="li4RDiv3 clearfix">
+								<span>地铁：</span>
+								<b>距苏州街站约156</b>
+							</div>
+							<div class="li4RDiv4 clearfix">
+								<span>电话：</span>
+								<b>010-52712345</b>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="j_place">
+					<div class="li5">
+						<h3>购买须知</h3>
+						<table>
+							<tr>
+								<td class="tdL">有效期</td>
+								<td>2014.12.24 至 2016.1.19(周末，法定节假日通用)</td>
+							</tr>
+							<tr>
+								<td class="tdL">使用时间</td>
+								<td>美团券24小时可用</td>
+							</tr>
+							<tr>
+								<td class="tdL">预约方式</td>
+								<td>无需预约，消费高峰可能需要等位</td>
+							</tr>
+							<tr>
+								<td class="tdL">其他</td>
+								<td class="tdLast">
+									<p>仅一次体验完毕</p> 
+									<p>店内不提供和储物柜服务</p>
+									<p>配有免费涌动器材：球杆，球</p>
+									<p>停车位收费标准：请咨询门店</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					
+				</li>
+				<li class="j_place">
+					<div class="li6">
+						<h3>本单详情</h3>
+						<table >
+							<tr cellspacing="10"  cellpadding="10">
+								<td colspan="4" class="tbBg tbBorder">享受生活</td>
+							</tr>
+							<tr>
+								<td class="tbBg tdW">套餐内容</td>
+								<td class="tbBg ">单价</td>
+								<td class="tbBg ">数量、规格</td>
+								<td class="tbBg ">小计</td>
+							</tr>
+							<tr class="trBorder">
+								<td>台球</td>
+								<td>￥42</td>
+								<td>3小时</td>
+								<td>￥126</td>
+								
+							</tr>
+							<tr class="trBorder">
+								<td colspan="4" class="li6tdLast">价值：￥126，美团价￥59</td>
+							</tr>
+						</table>
+					</div>
+				</li>
+				<li >
+					<div class="li7">
+						<h3>美团推荐</h3>
+						<ul>
+							<li><img src="images/62.jpg" /></li>
+							<li><img src="images/61.jpg" /></li>
+							<li><img src="images/45.jpg" /></li>
+							<li><img src="images/46.jpg" /></li>
+							<li><img src="images/47.jpg" /></li>
+						</ul>
+					</div>
+				</li>
+				<li class="j_place">
+					<div class="li6 li8">
+						<h3>商家介绍</h3>
+						<div>【中关村】台球畅达1小时，免费提供WiF</div>
+					</div>
+				</li>
+				<li class="j_place">
+					<div class="li9">
+						<img src="images/4.png" />
+					</div>
+				</li>
+				
+						
+			</ul>
+			<div class="content_three right">
+				<ul class="content_three_list">
+					<li><img src="images/31.jpg"></li>
+					<li class="content_three_list_last"><img src="images/33.jpg"></li>
+				</ul>
+				<ul class="content_three_list">
+					<li><img src="images/31.jpg"></li>
+					<li class="content_three_list_last"><img src="images/33.jpg"></li>
+				</ul>
+				<ul class="content_three_list content_three_list2">
+					<li class="three_list2">
+						<img src="images/5.png" />
+					</li>
+				</ul>
+				<ul class="content_three_list">
+					<li><img src="images/31.jpg"></li>
+					<li class="content_three_list_last"><img src="images/33.jpg"></li>
+				</ul>
+				<ul class="content_three_list content_three_list2">
+					<li class="three_list2"><img src="images/5.png"></li>
+					
+				</ul>
+				<ul class="content_three_list" id="j-lookUp">
+					<li class="three_lilast three_lilast1">
+						<div class="clearfix">
+							<strong class="left three_spanL">最近浏览</strong>
+							<span class="right three_spanR">清空</span>
+						</div>
+						
+						<div class="three_div clearfix">
+							<div class="three_div1 left"><img src="images/51.jpg" /></div>
+							<div class="three_div2 right">
+								<p>暴力国际电影城2D电影票一张</p>
+								<i>￥41</i>
+								<em>门店价 ￥90</em>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+		<div class="footer"> 
+			<div class="footer_main">
+				<ul class="footer_t clearfix" id="footer_btn">
+					<li class="active">团购分类</li>
+					<li>热门地标</li>
+					<li>热门团购</li>
+					<li>精品推荐</li>
+					<li>美食美团</li>
+					
+				</ul>
+				<ul class="footer_c clearfix" id="footer_cont">
+					<li class="active"><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a><a href="#">美食团购</a></li>
+					<li><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a><a href="#">电影团购</a></li>
+					<li><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a><a href="#">休闲娱乐团购</a></li>
+					<li><a href="#">购物团购</a><a href="#">购物团购</a><a href="#">购物团购</a><a href="#">休闲娱乐团购</a><a href="#">购物团购</a><a href="#">休闲娱乐团购</a><a href="#">购物团购</a><a href="#">购物团购</a><a href="#">购物团购</a></li>
+					<li><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a><a href="#">休闲娱乐团购</a><a href="#">丽人团购</a></li>
+					
+				</ul>
+			</div>
+			<div class="footer_middle clearfix">
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				<dl>
+					<dt>获取更新</dt>
+					<dd><a href="#">邮件订阅</a></dd>
+					<dd><a href="#">iphone</a></dd>
+					<dd><a href="#">美团QQ空间</a></dd>
+					<dd><a href="#">美团新浪微博</a></dd>
+					<dd><a href="#">sitmap</a></dd>
+					<dd><a href="#">RSS订阅</a></dd>
+				</dl>
+				
+				<div class="left footer_middle_r">
+					<div>
+						<p  class="footer_m_p1">客服电话</p>
+						<p  class="footer_m_p2">400-600-5352</p>
+					</div>
+					<div class="footer_m_r2">
+						<p>退款、退换货、查看美团券</p>
+						<a href="#">参考教程，轻松搞定</a>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="footer_bottom">
+				<span>&copy;美团网团购 meituan.com 京ICP证0707971号，京公网安备1101050225545号 电子公告服务规则</span>
+			</div>
+			
+		</div>
+	
+	<div class="position_right" id="fixed_ul_Up"><i class="close" id="close"></i></div>
+	
+	<ul class="fixed" >
+		<li class="fixed_right1">
+			<i></i>
+			<p>回到顶部</p>
+		</li>
+		<li class="fixed_right2"><i></i>
+			<p>回到顶部</p>
+		</li>
+		<li class="fixed_right3" id="fixed_top"><i></i><p>回到顶部</p></li>
+		<li class="fixed_right4"><i></i><p>回到顶部</p></li>
+	</ul>
+</body>
+</html>

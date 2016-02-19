@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header_t_cont{width:980px; margin:0 auto; height:30px;}
+.header_m{ margin:0 auto 30px; width:980px; }
+.header_m_cont_l{ margin-right:93px;}
+.header_m_cont_m{width:411px; height:38px; border:2px solid #2db8ad;}
+.header_b{ width:980px;margin:0 auto;}
+.nav_r{width:706px; height:40px; background:#2bb8aa; padding-left:28px;}
+
+.nav_l{ position:relative;}
+.nav_l .one_l{display:none; position:absolute; top:40px; left:0px; z-index:1; height:468px;}
+
+
+.wrapper{ width:980px; margin:0 auto;}
+.content{width: 963px; height:76px; border:1px solid #ccc; margin:10px 0;padding:12px 0 0 15px;}
+.content_list{ width:948px;border-bottom:1px dashed #ccc; padding-bottom:12px; height:19px; line-height:19px;}
+.content_list .bor_green{ float:left; height:19px; padding:0 9px; border:1px solid #2bb8aa; position:relative;}
+.content_addChild{ display:inline-block; }
+.address{ display:none; width:220px; height:70px; border:1px solid #ccc; background:#fff; position:absolute; top:20px; left:0; padding:5px;}
+.address a{ float:left; margin-right:10px; margin-bottom:8px; color:#333; width:55px;}
+
+
+.liClose{ float:left; width:19px; height:19px; background:url(../images/29.jpg) no-repeat; vertical-align:middle; border:1px solid #2bb8aa; margin-left:-1px;}
+.content_list_span{ margin:0 10px ; float:left; margin-top:5px;}
+.content_b{padding-top:14px; height:28px;}
+.content_b p{ color:#333; float:left; margin-right:14px; line-height:19px; }
+.content_b a{ padding:0 4px; height:19px; float:left; margin-right:20px;line-height:19px;}
+
+
+.content_two{width:978px; height:29px; border:1px solid #ccc; margin-bottom:10px; }
+.two_list{width:978px;}
+.two_list li{ float:left; width:53px; border-right:1px solid #ccc; height:29px; line-height:29px; padding-left:19px;}
+.content_two .two_list_first{ width:40px;}
+
+.down{display:inline-block; background:url(../images/30.jpg) no-repeat; width:7px; height:8px; margin-left:6px;}
+.two_list li.active{ border-top:3px solid #2bb8aa; height:27px; line-height:24px; color:#2bb8aa;}
+
+.list{ border:none; width:740px;}
+.list>li{width:350px;height:370px; margin-right:16px; margin-bottom:15px; padding:0;float:left;border:1px solid #ccc;border-bottom:1px solid #ccc;}
+.list>li>a>img{margin-bottom:17px;width:350px; height:214px;}
+
+
+.content_three_list{ width:197px;  border:1px solid #ccc; padding:31px 21px 8px 20px; margin-bottom:16px;}
+.content_three_list li{ padding-bottom:26px;}
+.content_three_list .content_three_list_last{border:none;}
+
+.content_three_list2{ padding:0px; border:0;}
+.three_list2{width:236px;}
+.three_list2 img{ width:100%;}
+.content_three_list{ background:#fff; z-index:1;}
+.content_three_list .three_lilast1{padding-bottom: 0px; }
+.content_three_list .content_three_list_last{border:none;}
+.three_div{ width:198px; height:70px; margin-top:10px;}
+.three_div1{width:80px; height:50px; margin-bottom:5px;}
+.three_div1 img{ width:100%;}
+.three_div2{ width:103px; height:50px;}
+.three_div2 p{ color:#999; margin-bottom:5px;}
+.three_div2 i{color:#f76120;}
+.three_div2 em{ color:#ccc; font-size:12px;}
+
+
+
+.position_right{ width:108px; height:253px;background:url(../images/34.jpg) no-repeat; position:absolute; right:0px; top:300px;}
+.position_right i{ position:absolute; top:113px; right:6px;background:url(../images/35.jpg) no-repeat; width:9px; height:9px;}
+
+
+.fixed{ position:fixed; right:0px; top:500px;}
+.fixed li{ border:1px solid #ccc; margin-top:-1px;}
+.fixed_right1{ background:url(../images/up.png) no-repeat 0 0; width:41px; height:41px;}
+.fixed_right2{ background:url(../images/up.png) no-repeat 0 -44px; width:41px; height:41px;}
+.fixed_right3{ background:url(../images/up.png) no-repeat 0 -88px; width:41px; height:41px;}
+.fixed_right4{ background:url(../images/up.png) no-repeat 0 -132px; width:41px; height:41px;}
+
+
+a:hover{color:#87dec4;}
+
+.footer_main{ width:980px; margin:0px auto;  margin-bottom:52px; }
+
+.footer_t li{ float:left;width:92px; height:24px; border:1px solid #ccc; margin-left:-1px;text-align:center; line-height:24px;}
+.footer_c{ width:978px;   position:relative;  }
+.footer_c li{width:958px; padding:10px; border:1px solid #ccc;}
+.footer_middle{ width:970px; margin:90px auto 30px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding-top:22px; height:190px; padding-left:10px; background:#fff;}
+
+.footer_middle dl{ width:95px; margin-right:95px; height:160px; float:left;}
+

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/base.css" rel="stylesheet"/>
+    <title></title>
+    <style>
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .wrap{
+            width:16rem;
+            margin: 0 auto;
+        }
+        html{
+            font-size: 20px;
+            font-family: "microsoft yahei";
+            background: #eee;
+        }
+        .header_top{
+            height:2.2rem;
+            background: #e94652;
+            font-size: 0.6rem;
+            color:#fff;
+        }
+        .header_l{
+            -width:9rem;
+            height:100%;
+        }
+        .header_r{
+            width:6.5rem;
+            height:100%;
+        }
+
+        .logo{
+            width:1.5rem;
+            height:1.5rem;
+            background: url(images/logo.png) no-repeat;
+            background-size: contain;
+            text-indent: -999rem;
+            margin: 0.25rem 0.25rem 0 0.25rem;
+        }
+        .header_l_p{
+            margin-top: 0.25rem;
+        }
+        .header_r span{
+            width:4rem;
+            height:1.5rem;
+            border-radius: 0.5rem;
+            border:0.05rem solid #fff;
+            margin-top: 0.25rem;
+            margin-right: 1rem;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+        .header_r i{
+            width:1rem;
+            height:1rem;
+            background: url("images/close-button.png") no-repeat;
+            background-size: 100%;
+            margin-top: 0.5rem;
+            margin-right: 0.25rem;
+        }
+        .header_m{
+            height:1.75rem;
+            background: #eee;
+            padding-top:0.25rem;
+        }
+        .header_m h2{
+            width:5rem;
+            height:1.5rem;
+            background: url("images/logo(1).png") no-repeat;
+            background-size: 100%;
+            margin-left: 0.25rem;
+        }
+        .reg{
+            width:2.25rem;
+            height:1.25rem;
+            display: inline-block;
+            background: #fff;
+            text-align: center;
+            color: #000;
+            line-height: 1.25rem;
+            margin-right: 0.1rem;
+        }
+        .log{
+            width:2.25rem;
+            height:1.25rem;
+            display: inline-block;
+            background: #e94653;
+            text-align: center;
+            color: #fff;
+            line-height: 1.25rem;
+        }
+
+        .cont_one{
+            width:15rem;
+            padding-top: 0.5rem;
+            height:7.5rem;
+            padding-left: 0.75rem;
+            background: #fff;
+        }
+        .cont_one ul li{
+            text-align: center;
+            font-size: 0.6rem;
+            float: left;
+            margin-right: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .cont_one ul li.last{
+            margin-right: 0.75rem;
+        }
+        .cont_one ul li i{
+            display: inline-block;
+            margin-bottom: 0.2rem;
+        }
+        .defalute_new_05{
+            width:1.9rem;
+            height:1.9rem;
+            background: url(images/defautl_new__05.png) no-repeat;
+            background-size:100% ;
+        }
+        .defalute_new_10{
+            width:1.9rem;
+            height:1.9rem;
+            background: url(images/default_new_10.png) no-repeat;
+            background-size:100% ;
+        }
+        .defalute_new_07{
+            width:1.9rem;
+            height:1.9rem;
+            background: url(images/defautl_new__07.png) no-repeat;
+            background-size:100% ;
+        }
+        .defalute_new_09{
+            width:1.9rem;
+            height:1.9rem;
+            background: url(images/defautl_new__09.png) no-repeat;
+            background-size:100% ;
+        }
+
+        .banner{
+            width:16rem;
+            height:8rem;
+            position: relative;
+        }
+        .banner_img{
+            width:16rem;
+            height:8rem;
+        }
+
+
+        .banner .banner_img li.first{
+            display: none;
+            background: url("images/banner_1.png") no-repeat;
+            background-size: 100%;
+        }
+        .banner .banner_img li.second{
+            display: none;
+            background: url("images/banner_2.png") no-repeat;
+            background-size: 100%;
+        }
+        .banner .banner_img li.third{
+            display: none;
+            background: url("images/banner_3.jpg") no-repeat;
+            background-size: 100%;
+        }
+        .banner .banner_img li{
+            width:100%;
+            height:100%;
+
+        }
+        .banner .banner_img li.active{
+            display: block;
+        }
+        .banner_btn{
+            width:4rem;
+            height:0.5rem;
+            position: absolute;
+            right: 0.2rem;
+            bottom: 0.5rem;
+            z-index: 2;
+        }
+        .banner_btn li{
+            float: left;
+            margin-right: 0.2rem;
+            width:0.5rem;
+            height:0.5rem;
+            background: #fff;
+            border-radius: 50%;
+        }
+        .cont_two{
+            width:16rem;
+            margin-top: 0.5rem;
+            background: #fff;
+            padding-bottom: 0.2rem;
+        }
+
+        .cont_two li{
+            padding: 0.75rem 0 0 0.25rem;
+            font-size: 0.5rem;
+            height:2.5rem;
+            border-bottom:0.05rem solid #ccc;
+        }
+        .cont_two li.last{
+            height:4.25rem;
+            border: none;
+        }
+        .cont_two h3{
+            width:15.5rem;
+            font-size: 0.6rem;
+            height:1.25rem;
+            line-height: 1.125rem;
+            border-bottom:0.05rem solid #ccc;
+            padding-left: 0.5rem;
+        }
+        .cont_img_1{
+            float: left;
+            width:1.5rem;
+            height:1.5rem;
+            background: url("images/cont_1.png") no-repeat;
+            background-size:100% ;
+            margin-right: 0.375rem;
+        }
+        .cont_two ul li h4{
+            font-weight: bold;
+            font-size: 0.6rem;
+            margin-bottom: 0.3rem;
+        }
+        .cont_two ul li strong{
+            color:#e95457;
+        }
+        .cont_two_t{
+            width:13rem;
+        }
+
+        .cont_two_last{
+            margin-top: 1.05rem;
+        }
+        .cont_two_last span{
+            float: left;
+            width:3.8rem;
+            height:1.05rem;
+            background: url("images/logo(1).png") no-repeat;
+            background-size: 100%;
+            margin-right: 0.4rem;
+        }
+        .cont_two_last em{
+            float: left;
+            font-size: 0.5rem;
+            margin-right: 0.2rem;
+        }
+        .cont_two .cont_two_last strong{
+            float: left;
+            width:4.3rem;
+            height:0.75rem;
+            background: #dc3844;
+            color:#fff;
+            text-align: center;
+            line-height: 0.75rem;
+            border-radius: 0.1rem;
+        }
+        footer{
+            padding:0.4rem 0;
+
+            width:16rem;
+            background: #fff;
+            margin-top: 0.5rem;
+            text-align: center;
+            color: #a5a5a5;
+        }
+
+        footer ul{
+            padding-left: 0.8rem;
+
+        }
+        footer ul li {
+            float: left;
+            margin: 0 0.7rem;
+        }
+        footer p{
+            line-height: 1rem;
+            font-size: 0.5rem;
+        }
+    </style>
+    <script>
+        window.onload=window.onresize=function(){
+            document.documentElement.style.fontSize=20*document.documentElement.clientWidth/320+'px';
+
+        }
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="header_top clearfix">
+            <div class="header_l left clearfix">
+                <h1 class="logo left">安心贷</h1>
+                <div class="header_l_p left">
+                    <p>安心投资</p>
+                    <p>安全、高效、透明</p>
+                </div>
+            </div>
+            <div class="header_r right">
+                <span class="left">下载APP</span>
+                <i class="left"></i>
+            </div>
+        </div>
+        <div class="header_m clearfix">
+            <h2 class="left"></h2>
+            <div class="right">
+                <span class="left reg">注  册</span>
+                <span class="right log">登  录</span>
+            </div>
+        </div>
+        <div class="banner">
+            <ul class="banner_img ">
+                <li class="first active"></li>
+                <li class="second"></li>
+                <li class="third"></li>
+            </ul>
+            <ul class="banner_btn">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </header>
+    <section class="cont_one">
+        <ul>
+            <li><i class="defalute_new_05"></i><p>走进安心</p></li>
+            <li><i class="defalute_new_10"></i><p>走进安心</p></li>
+            <li><i class="defalute_new_07"></i><p>走进安心</p></li>
+            <li class="last"><i class="defalute_new_09"></i><p>走进安心</p></li>
+            <li><i class="defalute_new_05"></i><p>走进安心</p></li>
+            <li><i class="defalute_new_10"></i><p>走进安心</p></li>
+            <li><i class="defalute_new_07"></i><p>走进安心</p></li>
+            <li class="last"><i class="defalute_new_09"></i><p>走进安心</p></li>
+        </ul>
+    </section>
+    <section class="cont_two">
+        <h3>理财产品</h3>
+        <ul>
+            <li class="clearfix">
+                <i class="cont_img_1"></i>
+                <div class="left">
+                    <div class="cont_two_t clearfix">
+                        <h4 class="left">抵押贷</h4>
+                        <em class="right"><strong>2</strong>个项目可投</em>
+                    </div>
+
+                    <p>预期年化收益高达14%</p>
+                </div>
+            </li>
+            <li class="clearfix">
+                <i class="cont_img_1"></i>
+                <div class="left">
+                    <div class="cont_two_t clearfix">
+                        <h4 class="left">周转贷</h4>
+                        <em class="right"><strong>15</strong>个项目可投</em>
+                    </div>
+
+                    <p>10元起投，期限最短5天</p>
+                </div>
+            </li>
+            <li class=" last clearfix">
+                <div class="clearfix">
+                    <i class="cont_img_1"></i>
+                    <div class="left">
+                        <div class="cont_two_t clearfix">
+                            <h4 class="left">债权转让</h4>
+                            <em class="right"><strong>2</strong>个项目可投</em>
+                        </div>
+
+                        <p>预期年化收益高达14%</p>
+                    </div>
+                </div>
+                <div class="cont_two_last">
+                    <span></span>
+                    <em>轻轻一点，注册成为安心贷会员</em>
+                    <strong>马上注册</strong>
+                </div>
+
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <ul>
+            <li>关注微信</li>
+            <li>数据透明</li>
+            <li>客户端</li>
+            <li>回到顶部</li>
+        </ul>
+        <div class="footer_m">
+            <p>&copy; 2011-2015君安信(北京)科技有限公司</p>
+            <p>联系电话：4000-515858</p>
+            <p>投资有风险，请谨慎投资</p>
+        </div>
+        <div class="footer_b">
+            <div></div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

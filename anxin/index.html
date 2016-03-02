@@ -83,7 +83,6 @@
         .reg{
             width:2.25rem;
             height:1.25rem;
-            font-size: 0.5rem;
             display: inline-block;
             background: #fff;
             text-align: center;
@@ -92,7 +91,6 @@
             margin-right: 0.1rem;
         }
         .log{
-            font-size: 0.5rem;
             width:2.25rem;
             height:1.25rem;
             display: inline-block;
@@ -153,35 +151,37 @@
             width:16rem;
             height:8rem;
             position: relative;
+            overflow: hidden;
         }
         .banner_img{
-            width:16rem;
+            width:80rem;
             height:8rem;
+            -webkit-transform:translate3d(-16rem,0,0);
+
         }
 
 
         .banner .banner_img li.first{
-            display: none;
+
             background: url("images/banner_1.png") no-repeat;
             background-size: 100%;
         }
         .banner .banner_img li.second{
-            display: none;
+
             background: url("images/banner_2.png") no-repeat;
             background-size: 100%;
         }
         .banner .banner_img li.third{
-            display: none;
+
             background: url("images/banner_3.jpg") no-repeat;
             background-size: 100%;
         }
-        .banner .banner_img li{
-            width:100%;
-            height:100%;
 
-        }
-        .banner .banner_img li.active{
-            display: block;
+        .banner .banner_img li{
+            width:16rem;
+            height:8rem;
+            float: left;
+
         }
         .banner_btn{
             width:4rem;
@@ -191,6 +191,7 @@
             bottom: 0.5rem;
             z-index: 2;
         }
+
         .banner_btn li{
             float: left;
             margin-right: 0.2rem;
@@ -198,6 +199,9 @@
             height:0.5rem;
             background: #fff;
             border-radius: 50%;
+        }
+        .banner_btn li.active{
+            background:#ce4851 ;
         }
         .cont_two{
             width:16rem;
@@ -298,9 +302,136 @@
     <script>
         window.onload=window.onresize=function(){
             document.documentElement.style.fontSize=20*document.documentElement.clientWidth/320+'px';
+        };
 
-        }
-    </script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var oUl=document.querySelectorAll('.banner ul')[0];
+            var oUlBtn=document.querySelectorAll('.banner ul')[1];
+            var aLi=oUl.children;
+            var aBtn=oUlBtn.children;
+
+            var iNow=1; //现在是第几张
+            var x=-iNow*aLi[0].offsetWidth;
+
+            var timer=null;
+            var bReady=true;
+
+            oUl.addEventListener('touchstart',function(ev){
+                clearInterval(timer);
+                if(bReady==false)return;
+                bReady=false;
+
+                oUl.style.WebkitTransition='none';
+                var downX=ev.targetTouches[0].pageX;
+                var disX=downX-x;
+
+                function fnMove(ev){
+                    x=ev.targetTouches[0].pageX-disX;
+
+                    oUl.style.WebkitTransform='translate3d('+x+'px,0px,0px)';
+                }
+                function fnEnd(ev){
+                    autoMove();
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+
+
+                    //代码
+                    var upX=ev.changedTouches[0].pageX;
+
+                    oUl.style.WebkitTransition='.5s all ease';
+
+                    if(Math.abs(upX-downX)>50){
+                        //切换
+                        if(upX<downX){ //左 ++
+                            iNow++;
+
+                            if(iNow==aLi.length)iNow=aLi.length-1;
+                        }else{ //右 --
+                            iNow--;
+                            if(iNow==-1)iNow=0;
+                        }
+
+                    }
+
+
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.WebkitTransform='translate3d('+x+'px,0px,0px)';
+
+                    //运动完了
+                    function tEnd(){
+                        bReady=true;
+                        oUl.removeEventListener('webkitTransitionEnd',tEnd,false);
+
+                        if(iNow==aLi.length-1){
+                            iNow=1;
+                            oUl.style.WebkitTransition='none';
+                            x=-iNow*aLi[0].offsetWidth;
+                            oUl.style.WebkitTransform='translate3d('+x+'px,0px,0px)';
+                        }
+
+                        if(iNow==0){
+                            iNow=aLi.length-2;
+                            oUl.style.WebkitTransition='none';
+                            x=-iNow*aLi[0].offsetWidth;
+                            oUl.style.WebkitTransform='translate3d('+x+'px,0px,0px)';
+                        }
+
+
+                        for(var i=0;i<aBtn.length;i++)
+                        {
+                            aBtn[i].className="";
+                        }
+                        aBtn[iNow-1].className="active";
+
+
+
+
+                    }
+                    oUl.addEventListener('webkitTransitionEnd',tEnd,false);
+                }
+
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+
+                ev.preventDefault();
+            },false);
+
+            function autoMove(){
+                timer=setInterval(function(){
+                    iNow++;
+
+
+                    if(iNow==aLi.length-1){
+
+                        iNow=1;
+
+                        x=-iNow*aLi[0].offsetWidth;
+                        oUl.style.WebkitTransform='translate3d('+x+'px,0px,0px)';
+
+
+                    }
+                    else
+                    {
+                        oUl.style.WebkitTransition='.5s all ease';
+
+                    }
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.WebkitTransform='translate3d('+x+'px,0px,0px)';
+
+
+                    for(var i=0;i<aBtn.length;i++)
+                    {
+                        aBtn[i].className="";
+                    }
+                    aBtn[iNow-1].className="active";
+                },2000);
+            }
+            autoMove();
+
+        },false);
+
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -327,12 +458,16 @@
         </div>
         <div class="banner">
             <ul class="banner_img ">
-                <li class="first active"></li>
-                <li class="second"></li>
-                <li class="third"></li>
+                <li class="third "></li>
+
+                <li class="first "></li>
+                <li class="second "></li>
+                <li class="third "></li>
+
+                <li class="first "></li>
             </ul>
             <ul class="banner_btn">
-                <li></li>
+                <li class="active"></li>
                 <li></li>
                 <li></li>
             </ul>

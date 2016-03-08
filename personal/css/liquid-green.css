@@ -12,8 +12,6 @@ html, body{
 #fbFooter {
 	height: 49px;
 	background-color: #000000;
-	background-image: url('../img/footerBackground.gif');
-	background-repeat: repeat-x;
 }
 
 .fbPaginationMinor {

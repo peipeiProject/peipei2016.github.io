@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title></title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="" type="image/x-icon"/>
+
+    <script src="js/base.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+    <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+    <script src="js/swiper.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+
+    <style>
+        body,html{
+            height:100%;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #fff;
+            -background-color: #ff1a37;
+            position: relative;
+        }
+        .wrapper{
+            width: 100%;
+            position: absolute;
+            left:0;
+            top:1000px;
+            transition:.4s all cubic-bezier(0.46,-0.44, 0.68, 1.49);
+        }
+        span,i,b{
+            display:inline-block;
+        }
+
+        a{
+            font-size: 14px;
+            color:#f1e9f2;
+        }
+        .header{
+            width:100%;
+            height:700px;
+            background: url("images/bannerbg.png");
+            background-size: cover;
+        }
+        .nav{
+            background: rgba(0, 0, 0, 0.24);
+            width:1208px;
+            margin: 0 auto;
+            height:52px;
+            padding-right: 15px;
+            padding-left: 15px;
+            line-height: 52px;
+           
+           
+        }
+        .header_top{
+            float: right;
+        }
+        .header_top li{
+            float: left;
+            margin:0px 10px;
+        }
+        .banner{
+            width:700px;
+            height:465px;
+            margin: 156px auto;
+            position: relative;
+        }
+        .introduction{
+            width:345px;
+            margin: 0 auto;
+            position: absolute;
+            top:-1700px;
+            left: 190px;
+            transition:1.2s all cubic-bezier(0.46,-0.44, 0.68, 1.49);
+        }
+        .diamond{
+            display: inline-block;
+            background: url("images/diamond.png");
+            width:48px;
+            height:47px;
+            margin-right: 20px;
+        }
+
+        .name{
+            font-size: 38px;
+            font-weight: bold;
+            text-shadow: 4px 2px 5px #000;
+
+        }
+        .motto{
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-shadow: 0 0 25px #fff;
+            position: absolute;
+            top:1000px;
+            left: auto;
+            transition:1.2s all cubic-bezier(0.46,-0.44, 0.68, 1.49);
+        }
+        small{
+           font-size: 16px;
+           margin-left:15px;
+        }
+        a.downarrow {
+            display: block;
+            position: absolute;
+            bottom: 40px;
+            left: 46%;
+        }
+
+        a.downarrow span {
+            height: 48px;
+            width: 48px;
+            background: url(images/down.png);
+            display: inline-block;
+        }
+
+        .content{
+            width:100%;
+            background: #fff;
+        }
+        .content_portfolio{
+            background: #281D24;
+            position: relative;
+
+        }
+        .content_ability{
+            position: relative;
+            color:#91898D;
+            padding-bottom: 120px;
+        ;
+        }
+        .classify{
+            margin-top: 30px;
+            height:500px;
+            width:100%;
+        }
+        .between{
+            text-align: center;
+            font-size: 36px;
+            padding-top: 50px;
+        }
+        .my-skills{
+            width:1320px;
+            margin: 0 auto;
+        }
+        .skill-grids>div{
+            float: left;
+            margin: 30px;
+        }
+        .skills-grid p {
+            margin: 30px 0 0 0;
+            color: #ffffff;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .footer{
+            width:100%;
+            height:500px;
+            background: url("images/footerbg.jpg") no-repeat;
+            background-size:cover;
+            padding-top:40px;
+        }
+        .footer_t{
+            text-align: center;
+            font-size: 36px;
+            color: #d5d7d8;
+            height:100px;
+        }
+        .line span{
+            background: #8C868A;
+            height: 1px;
+            width: 20%;
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+        a.uparrow{
+            background: url("images/up.png") no-repeat;
+            position: absolute;
+            bottom:30px;
+            left:46%;
+            width:48px;
+            height:48px;
+        }
+        a.bwn{
+            background: url("images/bwn.png") no-repeat;
+            position: absolute;
+            bottom:30px;
+            left:48%;
+            width:48px;
+            height:48px;
+
+        }
+        a.ability{
+            background: url("images/down.png") no-repeat;
+            position: absolute;
+            bottom:30px;
+            left:48%;
+            width:48px;
+            height:48px;
+        }
+
+        .footer_b{
+            position: relative;
+            width:700px;
+            height:100px;
+            margin: 0 auto;
+        }
+        .play{
+            width:100%;
+            height:800px;
+            background: #f3f3f3;
+            position: relative;
+        }
+        .play .between{
+            color:#91898D;
+        }
+        .swiper-container{
+            width:800px;
+            height:450px;
+            padding-top: 50px;
+        }
+        .swiper-slide{
+            width:800px;
+            height:450px;
+            line-height: 450px;
+            text-align: center;
+            font-size: 40px;
+            background: #399;
+            color: #fff;
+            box-shadow: inset 3px 1px 20px 2px #d7d7d7;
+        }
+        .swiper-pagination span{
+            background: #fff;
+            width:10px;
+            height:10px;
+        }
+        .footer_m{
+            height:300px;
+            text-align: center;
+        }
+        .footer_m a{
+            text-align: center;
+        }
+        .footer_m a h2{
+            font-size: 50px;
+            font-weight: bold;
+            color: #ebebeb;
+            margin-bottom: 20px;
+        }
+        .footer_m a h3{
+            font-size: 40px;
+            color: #ebebeb;
+            margin-bottom: 15px;
+        }
+        .cont_fixed{
+            position: fixed;
+            z-index: 999;
+            top:-450px;
+            left: 0;
+            width:100%;
+            transition:1s all cubic-bezier(0.52, 0.16, 0.54, 2.35);
+        }
+        .workFlow{
+            height:360px;
+        }
+        #web{
+            height:350px;
+        }
+
+        .icon_bar{
+            position: absolute;
+            bottom: -165px;
+            left:90%;
+        }
+        .in_box{
+            width:700px;
+            height:400px;
+            margin: 0 auto;
+            border:1px solid #ccc;
+            box-shadow: inset 3px 1px 20px 2px #d7d7d7;
+            margin-top: 12px;
+            padding-top: 12px;
+        }
+        video{
+            width:680px;
+            margin: 0 auto;
+            height:380px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="header pageScrollT" id="header">
+
+        <div class="nav clearfix">
+
+        </div>
+        <div class="banner ">
+            <p class="motto">从未尝试抱怨，一直努力改变</p>
+            <div class="introduction clearfix">
+                <i class="diamond left"></i>
+                <div class="left">
+                    <span class="name">裴元秋<small>(前端开发工程师)</small></span>
+                </div>
+            </div>
+            <a class="downarrow scroll" href="javascript:;">
+                <span> </span>
+            </a>
+        </div>
+    </div>
+    <div class="content" >
+        <div class="play pageScrollT" >
+            <div class="between line">
+                <span></span>
+                样式展示
+                <span></span>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide one_hover_cons" style="background: #399">
+                        <div class="in_box">
+                          <video src="1.mp4" ></video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background: #ff42d0">Slide 2</div>
+                    <div class="swiper-slide" style="background: #ffb213">Slide 3</div>
+                    <div class="swiper-slide" style="background: #ff4075; z-index: 3">Slide 4</div>
+                    <div class="swiper-slide" style="background: #5c9950;z-index: 3">Slide 5</div>
+                </div>
+
+
+            </div>
+            <a class="ability  scroll" href="javascript:;">
+                <span> </span>
+            </a>
+        </div>
+        <script>
+            $('.swiper-wrapper').find('.swiper-slide').eq(0).mouseenter(function(){
+
+                $('video').attr('controls','controls');
+            }).mouseleave(function(){
+
+                $('video').removeAttr('controls');
+            });
+            new Swiper('.swiper-container',{
+                pagination: '.swiper-pagination',
+                spaceBetween:10,
+                effect: 'cube',
+                grabCursor: true,
+                cube: {
+                    shadow: true,
+                    slideShadows: true,
+                    shadowOffset: 20,
+                    shadowScale: 0.94
+                },
+                loop:true
+            });
+
+        </script>
+        <div class="content_portfolio pageScrollT" id="portfolio">
+            <div class="between line">
+                <span></span>
+                个人技能
+                <span></span>
+            </div>
+            <div class="classify">
+                <div class="my-skills text-center" id="skill">
+                    <div class="container">
+
+                        <div class="skill-grids">
+                            <div class="col-md-2 skills-grid text-center">
+                                <div class="circle" id="circles-1"><div class="circles-wrp" style="position:relative; display:inline-block;"><svg width="160" height="160"><path fill="transparent" stroke="#f6608a" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 79.89582650464463 5.000072347482458 Z"></path><path fill="transparent" stroke="#ffffff" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 35.85118044960576 19.370949765753977 "></path></svg><div class="circles-text-wrp" style="position:absolute; top:0; left:0; text-align:center; width:100%; font-size:56px; height:160px; line-height:160px;"><span class="circles-number"><span class="circles-number">90</span></span><span class="circles-text">%</span></div></div></div>
+                                <p>html/css</p>
+                            </div>
+                            <div class="col-md-2 skills-grid text-center">
+                                <div class="circle" id="circles-2"><div class="circles-wrp" style="position:relative; display:inline-block;"><svg width="160" height="160"><path fill="transparent" stroke="#f6608a" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 79.89582650464463 5.000072347482458 Z"></path><path fill="transparent" stroke="#ffffff" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 35.85118044960576 19.370949765753977 "></path></svg><div class="circles-text-wrp" style="position:absolute; top:0; left:0; text-align:center; width:100%; font-size:56px; height:160px; line-height:160px;"><span class="circles-number"><span class="circles-number">90</span></span><span class="circles-text">%</span></div></div></div>
+                                <p>javascript</p>
+                            </div>
+                            <div class="col-md-2 skills-grid text-center">
+                                <div class="circle" id="circles-3"><div class="circles-wrp" style="position:relative; display:inline-block;"><svg width="160" height="160"><path fill="transparent" stroke="#f6608a" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 79.89582650464463 5.000072347482458 Z"></path><path fill="transparent" stroke="#ffffff" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 35.85118044960576 19.370949765753977 "></path></svg><div class="circles-text-wrp" style="position:absolute; top:0; left:0; text-align:center; width:100%; font-size:56px; height:160px; line-height:160px;"><span class="circles-number"><span class="circles-number">90</span></span><span class="circles-text">%</span></div></div></div>
+                                <p>Html 5 / CSS 3</p>
+                            </div>
+                            <div class="col-md-2 skills-grid text-center">
+                                <div class="circle" id="circles-4"><div class="circles-wrp" style="position:relative; display:inline-block;"><svg width="160" height="160"><path fill="transparent" stroke="#f6608a" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 79.89582650464463 5.000072347482458 Z"></path><path fill="transparent" stroke="#ffffff" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 8.704055142281334 103.27849322540312 "></path></svg><div class="circles-text-wrp" style="position:absolute; top:0; left:0; text-align:center; width:100%; font-size:56px; height:160px; line-height:160px;"><span class="circles-number"><span class="circles-number">70</span></span><span class="circles-text">%</span></div></div></div>
+                                <p>nodeJs</p>
+                            </div>
+                            <div class="col-md-2 skills-grid text-center">
+                                <div class="circle" id="circles-5"><div class="circles-wrp" style="position:relative; display:inline-block;"><svg width="160" height="160"><path fill="transparent" stroke="#f6608a" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 79.89582650464463 5.000072347482458 Z"></path><path fill="transparent" stroke="#ffffff" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 8.65335476362499 56.87736577474685 "></path></svg><div class="circles-text-wrp" style="position:absolute; top:0; left:0; text-align:center; width:100%; font-size:56px; height:160px; line-height:160px;"><span class="circles-number"><span class="circles-number">80</span></span><span class="circles-text">%</span></div></div></div>
+                                <p>angular</p>
+                            </div>
+                            <div class="col-md-2 skills-grid text-center">
+                                <div class="circle" id="circles-6"><div class="circles-wrp" style="position:relative; display:inline-block;"><svg width="160" height="160"><path fill="transparent" stroke="#f6608a" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 79.89582650464463 5.000072347482458 Z"></path><path fill="transparent" stroke="#ffffff" stroke-width="10" d="M 79.98472450972287 5.000001555604044 A 75 75 0 1 1 35.98377886071055 140.7253841207873 "></path></svg><div class="circles-text-wrp" style="position:absolute; top:0; left:0; text-align:center; width:100%; font-size:56px; height:160px; line-height:160px;"><span class="circles-number"><span class="circles-number">60</span></span><span class="circles-text">%</span></div></div></div>
+                                <p>photoshop</p>
+                            </div>
+                            <div class="clearfix"> </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="bwn scroll" href="javascript:;">
+                <span> </span>
+            </a>
+
+        </div>
+        <div class="content_ability pageScrollT" id="ability">
+            <div class="between line">
+                <span></span>
+                代表作品
+                <span></span>
+            </div>
+            <div>
+
+            <div class="book_wrapper">
+                <a id="next_page_button"></a>
+                <a id="prev_page_button"></a>
+
+                <div id="mybook" style="display:none;">
+                    <div class="b-load">
+                        <div>
+                            <h1>摄影网站</h1>
+                            <img src="images/1.png" alt=""/>
+                            <h1>图片展示</h1>
+
+                            <a href="javascript:;" target="_blank" class="article">Article</a>
+                            <a href="javascript:;" target="_blank" class="demo">Demo</a>
+                        </div>
+                        <div>
+                            <h1>摄影网站</h1>
+                            <img src="images/2 .png" alt="" />
+
+
+                            <a href="http://tympanus.net/codrops/2010/11/14/animated-portfolio-gallery/" target="_blank" class="article">Article</a>
+                            <a href="http://tympanus.net/Tutorials/AnimatedPortfolioGallery/" target="_blank" class="demo">Demo</a>
+                        </div>
+                        <div>
+                            <img src="images/3.png" alt="" />
+
+                              </div>
+                        <div>
+                            <img src="images/4.png" alt="" />
+                            <h1>进度条</h1>
+                            <p>
+                                js模拟进度条，通过改变颜色块的宽，从而达到视觉上进度条加载状态的效果
+                            </p>
+                            <a href="http://tympanus.net/codrops/2010/12/10/bubbleriffic-image-gallery/" target="_blank" class="article">Article</a>
+                            <a href="http://tympanus.net/Tutorials/BubblerifficImageGallery/" target="_blank" class="demo">Demo</a>
+                        </div>
+                        <div>
+                            <img src="images/5.png" alt="" />
+                            <h1>时间轴</h1>
+                            <p>通过css定位，js获取时间，制成简易时间轴</p>
+                            <a href="http://tympanus.net/codrops/2010/09/06/collapsing-site-navigation/" target="_blank" class="article">Article</a>
+                            <a href="http://tympanus.net/Tutorials/CollapsingSiteNavigation/" target="_blank" class="demo">Demo</a>
+                        </div>
+                        <div>
+                            <img src="images/6.png" alt="" />
+                            <h1>Custom Animation Banner</h1>
+                            <p>In today’s tutorial we will be creating a custom animation banner with jQuery.
+                                The idea is to have different elements in a banner that will
+                                animate step-wise in a custom way.</p>
+                            <p>We will be using the jQuery Easing Plugin and the jQuery 2D
+                                Transform Plugin to create some nifty animations.</p>
+                            <a href="http://tympanus.net/codrops/2010/10/18/custom-animation-banner/" target="_blank" class="article">Article</a>
+                            <a href="http://tympanus.net/Tutorials/CustomAnimationBanner/" target="_blank" class="demo">Demo</a>
+                        </div>
+                        <div>
+                            <img src="images/7.png" alt="" />
+                            </div>
+                        <div>
+                            <img src="images/9.png" alt="" />
+                           <a href="http://tympanus.net/codrops/2010/11/16/hover-slide-effect/" target="_blank" class="article">Article</a>
+                            <a href="http://tympanus.net/Tutorials/HoverSlideEffect/" target="_blank" class="demo">Demo</a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- The JavaScript -->
+
+            <script type="text/javascript">
+                $(function() {
+                    var $mybook 		= $('#mybook');
+                    var $bttn_next		= $('#next_page_button');
+                    var $bttn_prev		= $('#prev_page_button');
+                    var $loading		= $('#loading');
+                    var $mybook_images	= $mybook.find('img');
+                    var cnt_images		= $mybook_images.length;
+                    var loaded			= 0;
+                    //preload all the images in the book,
+                    //and then call the booklet plugin
+
+                    $mybook_images.each(function(){
+                        var $img 	= $(this);
+                        var source	= $img.attr('src');
+                        $('<img/>').load(function(){
+                            ++loaded;
+                            if(loaded == cnt_images){
+                                $loading.hide();
+                                $bttn_next.show();
+                                $bttn_prev.show();
+                                $mybook.show().booklet({
+                                    name:               null,
+                                    width:              800,
+                                    height:             500,
+                                    speed:              600,
+                                    direction:          'LTR',
+                                    startingPage:       0,
+                                    easing:             'easeInOutQuad',
+                                    easeIn:             'easeInQuad',
+                                    easeOut:            'easeOutQuad',
+
+                                    closed:             true,
+                                    closedFrontTitle:   null,
+                                    closedFrontChapter: null,
+                                    closedBackTitle:    null,
+                                    closedBackChapter:  null,
+                                    covers:             false,
+
+                                    pagePadding:        10,
+                                    pageNumbers:        true,
+
+                                    hovers:             false,
+                                    overlays:           false,
+                                    tabs:               false,
+                                    tabWidth:           60,
+                                    tabHeight:          20,
+                                    arrows:             false,
+                                    cursor:             'pointer',
+
+                                    hash:               false,
+                                    keyboard:           true,
+                                    next:               $bttn_next,
+                                    prev:               $bttn_prev,
+
+                                    menu:               null,
+                                    pageSelector:       false,
+                                    chapterSelector:    false,
+
+                                    shadows:            true,
+                                    shadowTopFwdWidth:  166,
+                                    shadowTopBackWidth: 166,
+                                    shadowBtmWidth:     50,
+
+                                    before:             function(){},
+                                    after:              function(){}
+                                });
+
+                            }
+                        }).attr('src',source);
+                    });
+
+                });
+            </script>
+            </div>
+            <a class="ability scroll" href="javascript:;">
+                <span> </span>
+            </a>
+        </div>
+    </div>
+    <div class="footer pageScrollT">
+        <div class="footer_t line">
+            <span></span>
+            联系方式
+            <span></span>
+        </div>
+        <div class="footer_m">
+            <a href="javascript:;">
+                <h2 class="footer_m_font1">Please contact me</h2>
+                <h3 class="footer_m_font2">TEL: 15201584231</h3>
+                <h3 class="footer_m_font3">QQ: 1083102113</h3>
+                <h3 class="footer_m_font4">WECHAT: 15201584231</h3>
+            </a>
+
+
+        </div>
+
+        <div class="footer_b scroll">
+            <a href="javascript:;" class="uparrow"></a>
+        </div>
+
+    </div>
+
+</div>
+<div class="cont_fixed " id="j_fixed">
+    <div id="web">
+
+        <div id="f5" class="workFlow">
+
+            <div class="wfBox wp" id="wfBox">
+                <div class="line"></div>
+                <div class="dot dot1 odd" style="opacity: 1;">
+                    <div class="icon"></div>
+                    <h6>需求收集</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir"></div>
+                        <div class="bg">
+                            <ul>
+                                <li><a href="javascript:;">竞争能力分析</a></li>
+                                <li><a href="javascript:;">SWOT分析</a></li>
+                                <li><a href="javascript:;">可行性分析</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir"></div>
+                    </div>
+                </div>
+                <div class="dot dot2 even" style="opacity: 1; bottom: 0px;">
+                    <div class="icon"></div>
+                    <h6>方案规划</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir" style="display: none;"></div>
+                        <div class="bg" style="height: 0px;">
+                            <ul>
+                                <li><a href="javascript:;">成立方案工作小组</a></li>
+                                <li><a href="javascript:;">需求分析</a></li>
+                                <li><a href="javascript:;">功能分析</a></li>
+                                <li><a href="javascript:;">内容规划</a></li>
+                                <li><a href="javascript:;">方案策划</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="dot dot3 odd" style="opacity: 1; top: 0px;">
+                    <div class="icon"></div>
+                    <h6>项目立项</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir" style="display: none;"></div>
+                        <div class="bg" style="height: 0px;">
+                            <ul>
+                                <li><a href="javascript:;">成立项目组</a></li>
+                                <li><a href="javascript:;">项目启动</a></li>
+                                <li><a href="javascript:;">项目调研</a></li>
+                                <li><a href="javascript:;">项目WBS分解</a></li>
+                                <li><a href="javascript:;">流程分析</a></li>
+                                <li><a href="javascript:;">需求定义</a></li>
+                                <li><a href="javascript:;">验收标准</a></li>
+                                <li><a href="javascript:;">项目备案</a></li>
+                                <li><a href="javascript:;">项目管理</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="dot dot4 even" style="opacity: 1; bottom: 0px;">
+                    <div class="icon"></div>
+                    <h6>创意设计</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir" style="display: none;"></div>
+                        <div class="bg" style="height: 0px;">
+                            <ul>
+                                <li><a href="javascript:;">创意规划</a></li>
+                                <li><a href="javascript:;">页面设计</a></li>
+                                <li><a href="javascript:;">创意设计</a></li>
+                                <li><a href="javascript:;">设计确认</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="dot dot5 odd" style="opacity: 1; top: 0px;">
+                    <div class="icon"></div>
+                    <h6>程序开发</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir" style="display: none;"></div>
+                        <div class="bg" style="height: 0px;">
+                            <ul>
+                                <li><a href="javascript:;">前端切图</a></li>
+                                <li><a href="javascript:;">用户体验</a></li>
+                                <li><a href="javascript:;">系统结构设计</a></li>
+                                <li><a href="javascript:;">功能开发</a></li>
+                                <li><a href="javascript:;">功能确认</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="dot dot6 even" style="opacity: 1; bottom: 0px;">
+                    <div class="icon"></div>
+                    <h6>客户审核</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir" style="display: none;"></div>
+                        <div class="bg" style="height: 0px;">
+                            <ul>
+                                <li><a href="javascript:;">客户意见</a></li>
+                                <li><a href="javascript:;">拓展性规划</a></li>
+                                <li><a href="javascript:;">应变管理</a></li>
+                                <li><a href="javascript:;">系统测试</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="dot dot7 odd" style="opacity: 1; top: 0px;">
+                    <div class="icon"></div>
+                    <h6>客户验收</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir" style="display: none;"></div>
+                        <div class="bg" style="height: 0px;">
+                            <ul>
+                                <li><a href="javascript:;">验收合格</a></li>
+                                <li><a href="javascript:;">网站上线</a></li>
+                                <li><a href="javascript:;">用户支持</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="dot dot8 even" style="opacity: 1;">
+                    <div class="icon"></div>
+                    <h6>后期维护</h6>
+                    <div class="wfBoxBg">
+                        <div class="topCir"></div>
+                        <div class="bg">
+                            <ul>
+                                <li><a href="javascript:;">后期维护</a></li>
+                                <li><a href="javascript:;">操作手册</a></li>
+                                <li><a href="javascript:;">运营维护</a></li>
+                                <li><a href="javascript:;">升级规划</a></li>
+                                <li><a href="javascript:;">未来发展研究</a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomCir"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.wfBox .odd').hover(function() {
+                var self = $(this),
+                        bg = self.find('.bg');
+
+                self.stop(true, true).animate({ top: '-40px' });
+                self.find('.topCir,.bottomCir').css('display', 'block');
+                bg.stop(true, true).animate({ height: bg.get(0).scrollHeight });
+            }, function() {
+                var self = $(this),
+                        bg = self.find('.bg');
+
+                self.stop(true, true).animate({ top: 0 });
+                bg.stop(true, true).animate({ height: 0 }).queue(function() {
+                    self.find('.topCir,.bottomCir').css('display', 'none');
+                });
+            });
+
+            $('.wfBox .even').hover(function() {
+                var self = $(this),
+                        bg = self.find('.bg');
+
+                self.stop(true, true).animate({ bottom: '140px' });
+                self.find('.topCir,.bottomCir').css('display', 'block');
+                bg.stop(true, true).animate({ height: bg.get(0).scrollHeight });
+            }, function() {
+                var self = $(this),
+                        bg = self.find('.bg');
+
+                self.stop(true, true).animate({ bottom: 0 });
+                bg.stop(true, true).animate({ height: 0 }).queue(function() {
+                    self.find('.topCir,.bottomCir').css('display', 'none');
+                });
+            });
+        </script>
+
+
+    </div>
+
+    <div class="icon_bar">
+        <img src="images/menu.png">
+    </div>
+</div>
+<audio autoplay src="1.mp3" loop="loop"></audio>
+
+
+<script>
+    window.onload=function(){
+        var oWrap=$('.wrapper');
+        var oName=$('.introduction');
+        var oMotto=$('.motto');
+        var oFixedCont=$('#j_fixed');
+        var oIconBar=$('.icon_bar');
+        var pageScrollT=$('.pageScrollT');
+        var aPageBtn=$('.scroll');
+        var arr=[];
+
+
+        oWrap.css('top',0);
+        oWrap.bind('transitionend',function(){
+            oName.css('top',0);
+        });
+        oName.bind('transitionend',function(){
+            oMotto.css('top','100px');
+        });
+        oIconBar.toggle(function(){
+            oFixedCont.css('top','0px');
+        },function(){
+            oFixedCont.css('top','-430px');
+        });
+
+        $('body,html').animate({'scrollTop':0},1000);
+
+        pageScrollT.each(function(index){
+            arr.push(pageScrollT.eq(index).position().top);
+
+        });
+        aPageBtn.each(function(index){
+            aPageBtn.eq(index).click(function(){
+                if(index == 4)
+                {
+                    index=-1;
+                }
+                $('body,html').animate({'scrollTop':arr[index+1]},1000);
+            })
+        });
+
+
+    };
+</script>
+</body>
+</html>

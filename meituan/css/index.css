@@ -76,7 +76,7 @@ body a:hover{color:#2bb8aa;}
 
 .content_three_last{width:100%;height:48px; background:#f6f6f6; text-align:center; line-height:48px; }
 
-.fixed_ul{ position:absolute; top:400px; left:150px;}
+.fixed_ul{ position:absolute; top:400px; left:2px;}
 .fixed_ul li{ width:41px; height:59px; border:1px solid #ccc; margin-top:-1px; text-align:center; line-height:59px; font-size:14px; background:#eee;}
 .fixed_ul li:hover{ background:#2bb8aa; color:#fff;}
 

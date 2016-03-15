@@ -1,0 +1,1645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/base.css" />
+<title>无标题文档</title>
+<style>
+
+
+
+
+
+.zdq-bg{height:28px;border-bottom:1px solid #ccc;}
+.zdq-content{width:980px;height:28px;margin:0 auto;}
+.zdq-h3{font-size:12px;height:28px;line-height:28px;float:left;}
+.zdq-h3 b{font-weight:bold;float:left;}
+.zdq-h3 a{color:#73abc9;float:left;}
+.zdq-h3 span{color:#666;float:left;}
+.zdq-h3 .zdq-qiehuan{margin-left:12px;background:url(img/h3-zdq-jiao.png)no-repeat 68px 0;width:93px;height:28px;}
+.zdq-h3 i{color:#666;float:left;background:url(img/zdq-cha.png)no-repeat 19px center;width:51px;height:28px;border-right:1px solid #ccc;}
+/*h3部分结束*/
+.zdq-list li{padding:1px 21px;float:left;height:15px;background:url(img/zdq-line1.png)no-repeat right top;}
+.zdq-list{float:right;margin-right:11px;height:21px;padding-top:7px;}
+.zdq-list a{font-size:12px;color:#73abc9;}
+.zdq-list .nuoni{padding-right:32px;}
+.zdq-list{background:url(img/zdq-sanjiaohei.png)no-repeat 164px 12px;}
+/*第二行开始*/
+.zdq-logo{width:980px;margin:0 auto;}
+.zdq-h1{background:url(img/zdq-logo.png)no-repeat;text-indent:-999px;width:285px;height:58px;margin-top:22px;margin-right:29px;float:left;}
+
+.zdq-input{width:310px;height:38px;border:1px solid #dfdfdf;text-indent:14px;outline:none;float:left;margin-left:30px;margin-top:1px;}
+.zdq-select{width:97px;height:38px;border:1px solid #fe5986;float:left;background:url(img/zdq-sousuo.png)no-repeat 9px center #ff658e;text-indent:48px;margin-top:1px;margin-left:-1px;}
+.zdq-select a{font-size:16px;color:#fff;line-height:38px;}
+.zdq-tuihuo{width:38px;height:38px;border:1px solid #fe5986;float:left;background:url(img/zdq-tuihuo.png)no-repeat 5px 3px #ff658e;margin-left:30px;margin-top:1px;}
+.zdq-logo-r{width:602px;height:45px;border-left:1px solid #ccc;float:left;margin-top:28px;}
+.zdq-sbt{font-size:15px;color:#f14a72;margin-left:11px;float:left;margin-top:6px;}
+/*第二行结束*/
+.zdq-sw{width:980px;margin:0 auto;}
+.zdq-sw a{font-size:12px;color:#999;}
+.zdq-sw li{float:left;margin-right:15px;padding-top:7px;padding-bottom:2px;}
+.zdq-sw .zdq-sw-first{margin-left:350px;}
+/*导航部分开始*/
+.zdq-bg-fen{height:39px;background:#ff658e;border:1px solid #fe5985;margin-top:7px;}
+.zdq-main{width:980px;margin:0 auto;position:relative;}
+.zdq-p-tg{font-size:15px;width:260px;float:left;background:#fafafa;text-align:center;height:38px;border-top:1px solid #fafafa;border-bottom:1px solid #fafafa;line-height:38px;}
+.zdq-nav li{float:left;padding:0 20px;height:38px;line-height:38px;}
+.zdq-nav a{font-size:13px;color:#fff;}
+.zdq-nav .zdq-shouye{background:#ee3968;width:27px;}
+.zdq-nav{height:38px;float:left;margin-right:-20px;}
+.zdq-fenjiao{background:url(img/zdq-jiao2.png)no-repeat;position:absolute;width:265px;height:7px;left:0;top:-7px;}
+
+.zdq-nav .zdq-xiazai{background:url(img/zdq-down.png)no-repeat left center;padding-left:28px;padding-right:0;}
+
+.zdq-nav .zdq-liulan{padding-left:14px;background:url(img/zdq-bsj.png)no-repeat 67px center;}
+.zdq-dz{background:url(img/zdq-dz.png)no-repeat;position:absolute;left:520px;top:-3px;width:26px;height:17px;}
+.zdq-nav-big{float:left;border:1px solid blue;}
+
+
+
+
+
+
+
+
+
+.tvb-nav{margin:0 auto;width:981px;}
+.tvb-left-list{width:260px;position:relative;}
+.tvb_zuo_fd{ width:260px; float:left;}
+.tvb-left-yinying{background:url(img/tvb-xubian-left.png) no-repeat;width:11px;height:490px;position:absolute;right:-11px;;top:0;}
+.tvb-bottom-yinying{background:url(img/tvb-xubian-bottom.png) no-repeat;width:260px;height:6px;position:absolute;bottom:-6px;left:0;}
+.tvb-sidebar{width:260px;border:1px solid #f7f7f7;height:490px;}
+.tvb-sidebar li{width:219px;height:46px;border-top:1px solid #f6f6f6;padding-top:10px;margin-left:20px;}
+.tvb-pc1{width:20px;height:20px;background:url(img/tvb-logo8.png) no-repeat;margin-left:5px;float:left;}
+.tvb-con1{margin-left:15px;margin-top:2px;float:left;width:178px;}
+.tvb-tit1{font-size:14px;font-weight:bold;color:#666666;}
+.tvb-sidebar .tvb-con1 a{margin-top:8px;float:left;font-size:12px;color:#666666;margin-right:12px;}
+
+
+.tvb-right-list{float:left;width:710px;margin-left:11px;}
+.tvb-subnav{font-size:12px;width:710px;height:42px;line-height:42px;border-bottom:1px solid #f3f3f3;position:relative;}
+.tvb-sub1{color:#999999;float:left;}
+.tvb-sub-con a{color:#666666;margin-left:22px;float:left;}
+.tvb-sanjiao a{position:absolute;right:0;top:17px;width:10px;height:8px;background:url(img/tvb-sanjiao.png) no-repeat;}
+
+
+.tvb-main-tit{font-size:17px;color:#000;width:72px;height:47px;background:url(img/tvb-logo9.png) no-repeat left center;padding-left:22px;margin-left:10px;line-height:47px;}
+.tvb-touch{position:relative;}
+.tvb-doats{width:92px;height:10px;position:absolute;right:0;top:24px;}
+.tvb-doat1{width:10px;height:10px;background:url(img/tvb-doat2.png) no-repeat;float:left;margin-left:13px;}
+.tvb-doat1:hover{background:url(img/tvb-doat1.png);}
+
+.tvb-bigpc{width:698px;height:310px;border:1px solid #f3f3f3;margin-left:10px;}
+
+
+
+
+
+
+
+
+
+
+.nzk_main{width:976px;height:263px;margin:0 auto;border:1px solid #e1e2e3;}
+.nzk_main_t{margin-left:20px;margin-top:10px;width:936px;height:33px;border-bottom:1px solid #e1e2e3;margin-bottom:10px;}
+.nzk_main_t h3{font-size:20px;color:#2b2b2b;float:left;}
+.nzk_main_t span{font-size:12px;color:#999999;float:left;margin-left:33px;margin-top:8px;margin-right:9px;}
+.nzk_main_t i{width:25px;height:22px;background:#666666;font-size:14px;color:#ffffff;float:left;text-align:center;line-height:22px;}
+.nzk_main_t b{font-size:16px;color:#666666;float:left;margin:0px 5px;}
+.nzk_main_t a{font-size:12px;color:#999999;float:right;margin-right:10px;margin-top:5px;}
+.nzk_main_c{margin-left:21px;} 
+.nzk_main_c_margin{margin-right:-1px;}
+.nzk_main_c_t{margin-right:20px;float:left;}
+.nzk_main_c_t img{border:1px solid #e1e2e3;}
+.nzk_main_c_t_c{margin-top:12px;line-height:15px;}
+.nzk_main_c_t_c h4{float:left;font-size:15px;color:#2b2b2b;}
+.nzk_main_c_t_c a{float:left;font-size:14px;color:#666666;margin-left:10px;}
+
+.nzk_main_c_t_b{line-height:24px;margin-top:15px;}
+.nzk_main_c_t_b span{float:left;font-size:24px;color:#fd8e51;margin-right:9px;font-family:'Microsoft Yahei';}
+.nzk_main_c_t_b p{float:left;font-size:14px;color:#999999;margin-right:4px;line-height:28px;}
+.nzk_main_c_t_b i{float:left;font-size:14px;color:#999999;text-decoration:line-through;line-height:28px;}
+.nzk_main_b{width:978px;height:46px;margin:0 auto;}
+.nzk_a1{float:left;font-size:14px;color:#ff6699;margin-top:19px;margin-left:20px;}
+.nzk_a2{float:left;font-size:14px;color:#666666;background:url(img/nzk_bjtg2.png) no-repeat right center;margin-top:19px;margin-left:29px;width:41px;}
+.nzk_a3{float:left;font-size:14px;color:#666666;background:url(img/nzk_bjtg3.png) no-repeat right center;margin-top:19px;margin-left:21px;width:41px;}
+.nzk_a4{float:left;font-size:14px;color:#666666;background:url(img/nzk_bjtg5.png) no-repeat right center;margin-top:19px;margin-left:21px;width:41px;}
+.nzk_a5{float:left;font-size:14px;color:#666666;background:url(img/nzk_bjtg5.png) no-repeat right center;margin-top:19px;margin-left:21px;width:69px;margin-right:30px;}
+.nzk_main_b{position:relative;}
+.nzk_main_b input{width:13px;height:13px;border:1px solid #666666;margin-top:19px;margin-right:5px;;float:left;}
+.nzk_main_b label{font-size:14px;color:#666666;line-height:14px;float:left;margin-top:19px;margin-right:10px;}
+
+.nzk_a6{float:left;font-size:14px;color:#999999;background:url(img/nzk_bjtg7.png) no-repeat left center;margin-top:19px;width:51px;padding-left:10px;margin-left:185px;}
+
+.nzk_main_nub{float:left;font-size:14px;color:#ff6699;margin-top:19px;margin-left:17px;}
+.nzk_main_num{float:left;font-size:14px;color:#7d667d;margin-top:19px;margin-right:16px;}
+.nzk_a7{float:left;font-size:14px;color:#666666;background:url(img/nzk_bjtg8.png) no-repeat right center;margin-top:19px;width:51px;}
+.nzk_pic{position:absolute;top:3px;left:573px;width:21px;height:15px;background:url(img/nzk_bjtg6.png) no-repeat;}
+
+
+
+
+
+
+
+.pyq_container{
+	
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background:#f2f2f2; 
+	margin-bottom:20px;
+	}
+.pyq_content{
+	width:980px;
+	margin:0 auto;
+	}
+  .pyq_content_left{
+	  width:736px;
+	
+	  margin-top:15px;
+	  float:left;
+	}
+.pyq_content_list{
+	margin-right:-16px;
+	
+	}
+.pyq_content_list li{
+	margin-right:16px;
+	width:360px;
+	height:404px;
+	float:left;
+	margin-bottom:17px;}
+.pyq_content_list_top{
+	position:relative;}
+.pyq_content_list_top_img1{
+	width:360px;
+	height:220px;
+	
+	}
+
+.pyq_content_list_top_i1{
+	width:45px;
+	height:27px;
+	position:absolute;
+	top:-4px;
+	left:10px;}
+.pyq_content_list_top_b{
+	position:absolute;
+	bottom:-4px;
+	left:2px;}
+.pyq_content_list_top_em{
+	position:absolute;
+	top:0px;
+	right:-3px;}
+	
+.pyq_content_list_top_i2{
+	width:45px;
+	height:27px;
+	position:absolute;
+	top:-4px;
+	left:65px;
+	}
+.pyq_content_list_top_i3{
+	width:45px;
+	height:27px;
+	position:absolute;
+	top:-4px;
+	left:120px;
+	}
+	
+.pyq_content_list_middle{
+	width:318px;
+	height:162px;
+	margin:0 auto;
+	background:#fff;
+	padding:16px 20px 0px;
+	position:relative; 
+	border-bottom:1px solid #ccc;}
+.pyq_content_list_middle_b{
+	border-top:1px solid #ccc;
+	width:318px;
+	margin-top:3px;}
+.pyq_content_list_middle h3{
+	font-size:17px;
+	font-weight:bold;
+	margin-bottom:15px;
+	}
+.pyq_content_list_middle>p{
+	font-size:14px ;
+	line-height:20px;}
+.pyq_content_list_middle>span{
+	margin-top:26px;
+	font-size:26px;
+	color:#fd9c51;
+	font-weight:bold;
+	display:block;}
+.pyq_content_list_middle>span>i{
+	font-size:14px;
+	color:#666;
+	margin-left:17px;}
+.pyq_content_list_middle_b>p{
+	text-align:right;
+	margin-top:10px;
+	color:#666;}
+
+.pyq_content_list_middle_b_icon{
+	background:url(img/pyq_3.jpg) no-repeat;
+	width:170px;
+	height:32px;
+	position:absolute;
+	top:147px;
+	left:-1px;}
+.pyq_content_list_middle_b_icon_shadow{
+	position:absolute;
+	bottom:-4px;
+	right:0px;}
+	
+	
+	
+.pyq_content_two{
+	width:980px;
+	margin:0 auto;
+	
+}
+.pyq_content_two_main{
+	width:980px;
+
+	}
+.pyq_content_two_main_list{
+	margin-right:-10px;
+	}
+	
+.pyq_content_two_main_list li{
+	width:320px;
+	height:373px;
+	float:left;
+	margin-right:10px;
+	border-bottom:1px solid #ccc;
+	margin-top:12px;}
+.pyq_content_two_list_middle{
+	width:280px;
+	height:163px;
+	margin:0 auto;
+	background:#fff;
+	padding:16px 20px 0px;
+	position:relative; }
+.pyq_content_two_list_middle_b{
+	border-top:1px solid #ccc;
+	width:280px;
+	margin-top:3px;}
+.pyq_content_two_list_middle h3{
+	font-size:17px;
+	font-weight:bold;
+	margin-bottom:15px;
+	}
+.pyq_content_two_list_middle>p{
+	font-size:14px ;
+	line-height:20px;}
+.pyq_content_two_list_middle>span{
+	margin-top:26px;
+	font-size:26px;
+	color:#fd9c51;
+	font-weight:bold;
+	display:block;}
+.pyq_content_two_list_middle>span>i{
+	font-size:14px;
+	color:#666;
+	margin-left:17px;}
+.pyq_content_two_list_middle_b>p{
+	text-align:right;
+	margin-top:10px;
+	color:#666;}
+
+.pyq_content_two_list_middle_b_icon{
+	background:url(img/pyq_3.jpg) no-repeat;
+	width:170px;
+	height:32px;
+	position:absolute;
+	top:147px;
+	left:-1px;}
+.pyq_content_two_list_middle_b_icon_shadow{
+	position:absolute;
+	bottom:-4px;
+	right:0px;}
+.pyq_content_list_top>img{
+	height:194px;}
+.pyq_content_footer{
+	width:980px;
+	margin:0 auto;}	
+.pyq_content_footer_list{
+	margin-right:-10px;
+	}	
+.pyq_content_footer_main{
+	width:390px;
+	margin:0 auto;
+	margin-bottom:50px;
+	}
+.pyq_content_footer_list li{
+	width:24px;
+	height:28px;
+	text-align:center;
+	line-height:28px;
+	background:#fff;
+	float:left;
+	margin-right:10px;
+	border:1px solid #f2f2f2;
+	
+	}	
+.pyq_content_footer_list>li>a{
+	font-size:10px;
+	display:inline-block;}
+.pyq_content_footer_list li:hover{
+	border:1px solid #ccc;
+	}
+.pyq_content_footer>h4{
+	
+	font-size:14px;
+	height:50px;
+	line-height:50px;
+	color:#666;
+	}
+.pyq_content_footer>h4>span{
+	font-size:14px;
+	color:#ff6699;
+	}		
+	
+	
+	
+	
+	
+
+
+.lcj_rlist{ float:right;
+          
+			width:227px; }
+			 
+.lcj_rlistt .lcj_rlisttl{height:190px;}
+                         
+						 
+.lcj_rlistt li{height:239px;
+			   margin-top:10px;}
+                
+
+				
+.lcj_rlistm h4{ font-size:16px;
+                margin:15px 0px 15px 10px;
+				color:#333333;}
+				
+.lcj_rlistml{ height:109px; 
+              border-bottom:1px solid #f2f2f2;
+			  background:#fff;}
+				
+.lcj_rlistml img{width:72px;
+                 height:72px;
+				 float:left;
+				 margin-top:17px;
+				 margin-left:12px;
+				 margin-right:7px;}
+				 
+.lcj_rlistml h5{ font-size:17px;
+                padding-top:20px;}
+				
+					
+.lcj_rlistml p{font-size:14px;
+               color:#464646;
+			   padding-top:14px;
+			   padding-bottom:11px;}
+			   
+.lcj_rlistml div{float:left;}			   
+.lcj_rlistml i{ color:#fe93b7;}
+			   	
+.lcj_rlistml span{color:#a2a2a2;}
+.lcj_rlistm .lcj_rlistmlb{ border-bottom:none;}
+
+.lcj_rlistb h4{ font-size:16px;
+                margin:15px 0px 5px 10px;
+				color:#333333;}
+.lcj_rlistbt{background:#fff;
+             height:237px; 
+             margin-top:10px;}				 
+.lcj_rlistbt p{ font-size:14px;
+                line-height:22px;}  
+.lcj_rlistbt i{ color:#ff668f;
+               line-height:40px;}
+.lcj_rlistbt span{ margin-left:90px;
+                 color:#999;}
+.lcj_rlistbt div{ margin-left:15px;
+                  margin-top:11px;} 
+				  
+
+
+/*---------------------------尾部开始------------------------------*/
+    .foot_zhengti{ width:980px; height:395px;
+	               margin:0 auto;}
+    .foot{ width:970px; height:300px; 
+	       padding-left:10px; 
+	       margin:0 auto;}
+	.foot_nav{ width:170px; height:195px; 
+	           border-left:1px solid #cccccc;
+	           margin-top:45px;}
+	.foot_hellp{ width:145px; height:32px; 
+	             font-size:14px; color:#666666; 
+				 font-weight:bold; margin-top:1px; 
+				 border-left:2px solid #fe8baa;
+				 line-height:32px; padding-left:25px;
+				 margin-bottom:21px;}
+	.foot_nav{ float:left;}
+	.foot_nav a{ color:#999999;}
+	.foot_nav dd{ margin-left:27px; margin-bottom:16px; 
+	              color:#999999;}
+	.foot_kefu{ width:280px; height:195px; 
+	            border-left:1px solid #cccccc;
+	            float:left; margin-top:45px;}
+	.foot_dh{ width:180px; height:32px; 
+	          background:url(img/syj_dh.png) no-repeat; 
+			  padding-left:100px; line-height:32px; 
+			  font-size:18px; color:#fe8baa; 
+			  font-weight:bold;}
+	.foot_kfsj{ margin-top:21px; margin-left:46px; 
+	            color:#666666;}
+	.foot_shouji{ width:280px; height:113px; 
+	              margin-top:19px; 
+	              background:url(img/syj_zt.png) no-repeat right;}
+	.foot_linr{ width:144px; margin-left:43px;
+	            padding-top:34px;}
+	.foot_sjzx,.foot_ssj{ font-size:18px; color:#666666; 
+	                      font-weight:bold;}
+	.foot_ssj{ margin-top:3px; margin-bottom:6px;}
+	.foot_xh a{ color:#f0577d;}
+	
+	.foot_bqtu{ width:980px; height:42px; 
+	            margin:0 auto;}
+	.foot_banquan{ width:370px;  margin:0 auto;}
+	.foot_zf_tu,.foot_rz_tu,.foot_cx_tu{ float:left; margin-right:10px;}
+	.foot_beian{ text-align:center; margin-top:20px;}
+	
+/*---------------------------尾部结束------------------------------*/
+
+
+  
+</style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+<!--张丹青head开始-->
+<div class="zdq-bg">
+	<div class="zdq-content clearfix">
+    	<h3 class="zdq-h3 clearfix"><b>北京</b><a class="zdq-qiehuan" href="#">[切换城市]</a><span>您正在浏览北京市团购，是否</span><a href="#">切换城市</a><i>？</i></h3>
+    	<ul class="zdq-list clearfix">
+        	<li><a href="#">我的订单</a></li>
+            <li class="nuoni"><a href="#">我的糯米</a></li>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+</div>
+<!--第一行结束-->
+<div class="zdq-logo clearfix">
+	<h1 class="zdq-h1">百度糯米</h1>
+    <div class="zdq-logo-r clearfix">
+	<input class="zdq-input" type="text" placeholder="小吃快餐"/>
+    <div class="zdq-select"><a href="#">搜索</a></div>
+    <div class="zdq-tuihuo"></div>
+    <a class="zdq-sbt" href="#">全场随便退<br/>独家承诺&gt;&gt;</a>
+	</div>
+</div>
+<!--第二行结束-->
+
+<ul class="zdq-sw clearfix">
+	<li class="zdq-sw-first"><a href="#">火锅</a></li>
+    <li><a href="#">蛋糕</a></li>
+    <li><a href="#">杨国福麻辣烫</a></li>
+    <li><a href="#">东方宫中国兰州牛肉拉面</a></li>
+    <li><a href="#">黄记煌三汁焖锅</a></li>
+
+</ul>
+<!--导航部分开始-->
+<div class="zdq-bg-fen">
+ <div class="zdq-main">
+ <div class="zdq-main1 clearfix">
+	<a href="#"><p class="zdq-p-tg">全部团购分类</p></a>
+   
+    <ul class="zdq-nav clearfix">	
+    	<li class="zdq-shouye"><a href="#">首页</a></li>
+        <li><a href="#">精选品牌</a></li>
+        <li><a href="#">购物</a></li>
+        <li><a href="#">电影</a></li>
+        <li><a href="#">酒店</a></li>
+        <li><a href="#">今日新单</a></li>
+        <li><a href="#">外卖</a></li>
+        <li class="zdq-xiazai"><a href="#">下载手机版</a></li>
+        <li class="zdq-liulan"><a href="#">最近浏览</a></li>
+    
+    </ul>
+    
+    </div>
+    <i class="zdq-fenjiao"></i>
+    <p class="zdq-dz"></p>
+    
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="tvb-nav clearfix">
+    <div class="tvb_zuo_fd">
+        <div class="tvb-left-list">
+            <div class="tvb-left-yinying"></div>
+            <div class="tvb-bottom-yinying"></div>
+            <ul class="tvb-sidebar">
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div> 
+                </li>
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div> 
+                </li>
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div>   
+                </li>
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div>    
+                </li>
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div>   
+                </li>
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div>     
+                </li>
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div>    
+                </li>
+                <li class="clearfix">
+                    <div class="tvb-pc1"></div>
+                    <div class="tvb-con1 clearfix">
+                        <h3 class="tvb-tit1">美食</h3>
+                        <a href="#">精选品牌</a>
+                        <a href="#">自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </div>   
+                </li>
+            </ul>	 
+        </div>
+    </div>
+    
+    
+    
+    
+	<div class="tvb-right-list">
+    	<dl class="tvb-subnav clearfix">
+        	<dt class="tvb-sub1">热门团购:</dt>
+            <dd class="tvb-sub-con"><a href="#">电影</a></dd>
+            <dd class="tvb-sub-con"><a href="#">自助餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">KTV</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">西餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">自助餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">KTV</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">西餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">西餐</a></dd>
+        </dl>
+        <dl class="tvb-subnav clearfix">
+        	<dt class="tvb-sub1">全国区域:</dt>
+            <dd class="tvb-sub-con"><a href="#">电影</a></dd>
+            <dd class="tvb-sub-con"><a href="#">自助餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">KTV</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">西餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">KTV</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">自助餐</a></dd>
+             <dd class="tvb-sanjiao"><a href="#"></a></dd>
+        </dl>
+        <dl class="tvb-subnav clearfix">
+        	<dt class="tvb-sub1">热门商圈:</dt>
+            <dd class="tvb-sub-con"><a href="#">电影</a></dd>
+            <dd class="tvb-sub-con"><a href="#">自助餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">KTV</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">西餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">KTV</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">西餐</a></dd>
+            <dd class="tvb-sub-con"><a href="#">火锅</a></dd>
+            <dd class="tvb-sub-con"><a href="#">酒店</a></dd>
+            <dd class="tvb-sub-con"><a href="#">自助餐</a></dd>
+        </dl>
+    	
+    	<div class="tvb-touch">	
+            <h4 class="tvb-main-tit">
+            本周精选
+            </h4>
+            <div class="tvb-doats">
+            	<a href="#" class="tvb-doat1"></a>
+                <a href="#" class="tvb-doat1"></a>
+                <a href="#" class="tvb-doat1"></a>
+                <a href="#" class="tvb-doat1"></a>
+            
+            </div>
+        </div>
+        <img src="img/tvb-bigpc.jpg" class="tvb-bigpc"  />  
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="nzk_main">
+    	<div class="nzk_main_t clearfix">
+        	<h3>精选品牌</h3>
+        	<span>距开始</span>
+        	<i>00</i>
+            <b>:</b>
+            <i>22</i>
+            <b>:</b>
+            <i>42</i>
+            <a href="#">更多&gt;</a>
+        </div>
+    	<div class="nzk_main_c clearfix">
+        	<div class="nzk_main_c_margin">
+                <div class="nzk_main_c_t">
+                    <img src="img/nzk_bjtg1.png" />
+                    <div class="nzk_main_c_t_c clearfix">
+                        <h4>百叶居</h4>
+                        <a href="#">百叶居75元</a>
+                    </div>
+                    <div class="nzk_main_c_t_b clearfix">
+                        <span>￥55</span>
+                        <p>价值</p>
+                        <i>100</i>
+                    </div>
+                </div>
+                <div class="nzk_main_c_t">
+                    <img src="img/nzk_bjtg1.png" />
+                    <div class="nzk_main_c_t_c clearfix">
+                        <h4>百叶居</h4>
+                        <a href="#">百叶居75元</a>
+                    </div>
+                    <div class="nzk_main_c_t_b clearfix">
+                        <span>￥55</span>
+                        <p>价值</p>
+                        <i>100</i>
+                    </div>
+                </div>
+                <div class="nzk_main_c_t">
+                    <img src="img/nzk_bjtg1.png" />
+                    <div class="nzk_main_c_t_c clearfix">
+                        <h4>百叶居</h4>
+                        <a href="#">百叶居75元</a>
+                    </div>
+                    <div class="nzk_main_c_t_b clearfix">
+                        <span>￥55</span>
+                        <p>价值</p>
+                        <i>100</i>
+                    </div>
+                </div>
+                <div class="nzk_main_c_t">
+                    <img src="img/nzk_bjtg1.png" />
+                    <div class="nzk_main_c_t_c clearfix">
+                        <h4>百叶居</h4>
+                        <a href="#">百叶居75元</a>
+                    </div>
+                    <div class="nzk_main_c_t_b clearfix">
+                        <span>￥55</span>
+                        <p>价值</p>
+                        <i>100</i>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+	<div class="nzk_main_b clearfix">
+    	<a href="#" class="nzk_a1">默认</a>
+    	<a href="#" class="nzk_a2">销量</a>
+        <a href="#" class="nzk_a3">价格</a>
+        <a href="#" class="nzk_a4">折扣</a>
+        <a href="#" class="nzk_a5">最新发布</a>
+        <input type="checkbox" id="yy">
+        <label for="yy">免预约</label>
+        <input type="checkbox" id="djq">
+        <label for="djq">代金券</label>
+        <input type="checkbox" id="qwzd">
+        <label for="qwzd">全网底价</label>
+        <a href="#" class="nzk_a6">上一页</a>
+        <i class="nzk_main_nub">1</i>
+        <span class="nzk_main_num">/494</span>
+        <a href="#" class="nzk_a7">下一页</a>
+        <i class="nzk_pic"></i>
+    </div>
+
+
+
+
+
+
+
+
+<div class="pyq_container clearfix">
+  <div class="pyq_content clearfix">
+   <div class="pyq_content_left clearfix">
+      <ul class="pyq_content_list clearfix">
+         <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_6.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+         <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+           <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+         <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+           <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+         <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+           <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+         <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+           <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+         
+         <li>
+            <div class="pyq_content_list_top">
+               <img src="img/pyq_1.jpg"  class="pyq_content_list_top_img1"/>
+                <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+              
+                <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+                 <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                 <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                
+                </i>
+            </div>
+            
+            <div class="pyq_content_list_middle">
+               
+                <h3>【多店通用】吉野家</h3>
+                <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                <span>￥14.5<i>价值 ￥29</i></span>
+                <div class="pyq_content_list_middle_b">
+                  <p>3974人已团购</p>
+                </div>
+                <div class="pyq_content_list_middle_b_icon">
+               
+                <i><img src="img/pyq_4.png"  class="pyq_content_list_middle_b_icon_shadow"/></i>
+                
+                </div>
+            </div>
+         </li>
+      </ul>
+   </div>
+    <div class="lcj_rightlist">
+    <div class="lcj_rlist">
+    
+       <ul class="lcj_rlistt">
+        <li class="lcj_rlisttl"><a href="#"> <img src="img/lcj-1.jpg" /></a></li>
+        <li><a href="#"> <img src="img/lcj-2.jpg" /></a></li>
+        <li><a href="#"> <img src="img/lcj-3.jpg" /></a></li>
+        <li><a href="#"> <img src="img/lcj-4.jpg" /></a></li>
+       </ul>
+       
+       <ul class="lcj_rlistm">
+        <li><h4><a href="#">热门专题</a></h4></li>
+        <li class="lcj_rlistml clearfix">
+            <a href="#"><img src="img/lcj-5.jpg" /></a>
+            <div class="clearfix">
+            <h5><a href="#">热辣火锅</a></h5>
+            <p><a href="#">从嘴暖到心</a></p>
+            <i>299348</i> <span>人团购</span>
+            </div>
+        </li>
+        
+        <li class="lcj_rlistml clearfix">
+            <a href="#"><img src="img/lcj-5.jpg" /></a>
+            <div class="clearfix">
+            <h5><a href="#">热辣火锅</a></h5>
+            <p><a href="#">从嘴暖到心</a></p>
+            <i>299348</i> <span>人团购</span>
+            </div>
+        </li>
+        
+        <li class="lcj_rlistml clearfix">
+            <a href="#"><img src="img/lcj-5.jpg" /></a>
+            <div class="clearfix">
+            <h5><a href="#">热辣火锅</a></h5>
+            <p><a href="#">从嘴暖到心</a></p>
+            <i>299348</i> <span>人团购</span>
+            </div>
+        </li>
+        
+        
+        <li class="lcj_rlistml clearfix">
+            <a href="#"><img src="img/lcj-5.jpg" /></a>
+            <div class="clearfix">
+            <h5><a href="#">热辣火锅</a></h5>
+            <p><a href="#">从嘴暖到心</a></p>
+            <i>299348</i> <span>人团购</span>
+            </div>
+        </li>
+        
+        <li class="lcj_rlistml lcj_rlistmlb clearfix">
+            <a href="#"><img src="img/lcj-5.jpg" /></a>
+            <div class="clearfix">
+            <h5><a href="#">热辣火锅</a></h5>
+            <p><a href="#">从嘴暖到心</a></p>
+            <i>299348</i> <span>人团购</span>
+            </div>
+        </li>
+       </ul>
+       
+     <div class="lcj_rlistb">
+         <h4><a href="#">热门专题</a></h4>
+         <div class="lcj_rlistbt">
+            <img src="img/lcj-8.jpg" />
+            <div>
+              <p>【红星太平洋影城】单人电影票！地理位置优越，交通便利！</p>
+              <i> ￥35</i><span>每天<i>1605</i>人团购</span>
+            </div>
+         </div>
+           
+         <div class="lcj_rlistbt">
+            <img src="img/lcj-8.jpg" />
+            <div>
+              <p>【红星太平洋影城】单人电影票！地理位置优越，交通便利！</p>
+              <i> ￥35</i><span>每天<i>1605</i>人团购</span>
+            </div>
+        </div>
+      </div>
+    </div>
+ </div>
+  </div>
+  
+  <div class="pyq_content_two">
+ 
+    <div class="pyq_content_two_main">
+        <ul class="pyq_content_two_main_list clearfix">
+            <li>
+                <div class="pyq_content_list_top">
+                   <img src="img/pyq-4.jpg" />
+                    <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                  
+                    <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                     <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                </div>
+                
+                <div class="pyq_content_two_list_middle">
+                   
+                    <h3>【多店通用】吉野家</h3>
+                    <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                    <span>￥14.5<i>价值 ￥29</i></span>
+                    <div class="pyq_content_two_list_middle_b">
+                      <p>3974人已团购</p>
+                    </div>
+                    <div class="pyq_content_two_list_middle_b_icon">
+                   
+                    <i><img src="img/pyq_4.png"  class="pyq_content_two_list_middle_b_icon_shadow"/></i>
+                    
+                    </div>
+                </div>
+         </li>
+         
+         
+          <li>
+                <div class="pyq_content_list_top">
+                   <img src="img/pyq-4.jpg" />
+                    <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                  
+                    <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                     <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                </div>
+                
+                <div class="pyq_content_two_list_middle">
+                   
+                    <h3>【多店通用】吉野家</h3>
+                    <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                    <span>￥14.5<i>价值 ￥29</i></span>
+                    <div class="pyq_content_two_list_middle_b">
+                      <p>3974人已团购</p>
+                    </div>
+                    <div class="pyq_content_two_list_middle_b_icon">
+                   
+                    <i><img src="img/pyq_4.png"  class="pyq_content_two_list_middle_b_icon_shadow"/></i>
+                    
+                    </div>
+                </div>
+         </li>
+         
+         
+         
+          <li>
+                <div class="pyq_content_list_top">
+                   <img src="img/pyq-4.jpg" />
+                    <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                  
+                    <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                     <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                </div>
+                
+                <div class="pyq_content_two_list_middle">
+                   
+                    <h3>【多店通用】吉野家</h3>
+                    <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                    <span>￥14.5<i>价值 ￥29</i></span>
+                    <div class="pyq_content_two_list_middle_b">
+                      <p>3974人已团购</p>
+                    </div>
+                    <div class="pyq_content_two_list_middle_b_icon">
+                   
+                    <i><img src="img/pyq_4.png"  class="pyq_content_two_list_middle_b_icon_shadow"/></i>
+                    
+                    </div>
+                </div>
+         </li>
+         
+         
+          <li>
+                <div class="pyq_content_list_top">
+                   <img src="img/pyq-4.jpg" />
+                    <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                  
+                    <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                     <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                </div>
+                
+                <div class="pyq_content_two_list_middle">
+                   
+                    <h3>【多店通用】吉野家</h3>
+                    <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                    <span>￥14.5<i>价值 ￥29</i></span>
+                    <div class="pyq_content_two_list_middle_b">
+                      <p>3974人已团购</p>
+                    </div>
+                    <div class="pyq_content_two_list_middle_b_icon">
+                   
+                    <i><img src="img/pyq_4.png"  class="pyq_content_two_list_middle_b_icon_shadow"/></i>
+                    
+                    </div>
+                </div>
+         </li>
+         
+         
+          <li>
+                <div class="pyq_content_list_top">
+                   <img src="img/pyq-4.jpg" />
+                    <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                  
+                    <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                     <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                </div>
+                
+                <div class="pyq_content_two_list_middle">
+                   
+                    <h3>【多店通用】吉野家</h3>
+                    <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                    <span>￥14.5<i>价值 ￥29</i></span>
+                    <div class="pyq_content_two_list_middle_b">
+                      <p>3974人已团购</p>
+                    </div>
+                    <div class="pyq_content_two_list_middle_b_icon">
+                   
+                    <i><img src="img/pyq_4.png"  class="pyq_content_two_list_middle_b_icon_shadow"/></i>
+                    
+                    </div>
+                </div>
+         </li>
+         
+         
+         
+          <li>
+                <div class="pyq_content_list_top">
+                   <img src="img/pyq-4.jpg" />
+                    <i class="pyq_content_list_top_i1"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                  
+                    <i class="pyq_content_list_top_i2"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                     <i class="pyq_content_list_top_i3"><img src="img/pyq_2.jpg" />
+                    <b class="pyq_content_list_top_b"><img src="img/pyq_2.png" /></b>
+                     <em class="pyq_content_list_top_em"><img src="img/pyq_3.png" /></em>
+                    
+                    </i>
+                </div>
+                
+                <div class="pyq_content_two_list_middle">
+                   
+                    <h3>【多店通用】吉野家</h3>
+                    <p>三杯鸡（含米饭）！入味鲜美鸡肉，精心制作，美味不容错过</p>
+                    <span>￥14.5<i>价值 ￥29</i></span>
+                    <div class="pyq_content_two_list_middle_b">
+                      <p>3974人已团购</p>
+                    </div>
+                    <div class="pyq_content_two_list_middle_b_icon">
+                   
+                    <i><img src="img/pyq_4.png"  class="pyq_content_two_list_middle_b_icon_shadow"/></i>
+                    
+                    </div>
+                </div>
+         </li>
+        </ul>
+    </div>
+  </div>
+  
+   <div class="pyq_content_footer">
+   <h4>共<span>44439</span>条/每条90条</h4>
+   <div class="pyq_content_footer_main">
+       <ul class="pyq_content_footer_list">
+          <li><a href="#">1</a>
+             
+          </li>
+          <li><a href="#">2</a>
+             
+          </li>
+      
+          <li><a href="#">3</a>
+             
+          </li>
+          <li><a href="#">4</a>
+             
+          </li>
+          <li><a href="#">5</a>
+             
+          </li>
+          <li><a href="#">6</a>
+             
+          </li>
+      
+          <li><a href="#">7</a>
+             
+          </li>
+          <li><a href="#">8</a>
+             
+          </li>
+          
+          <li><a href="#">9</a>
+             
+          </li>
+          <li><a href="#">10</a>
+             
+          </li>
+           <li><a href="#"><img src="img/pyq_5.jpg" /></a>
+             
+          </li>
+          
+       </ul>
+   </div>
+</div>
+ 
+  
+  
+</div>
+
+
+
+
+
+
+
+<!---------------------------尾部开始------------------------------->
+    <div class="foot_zhengti">
+        <div class="foot clearfix">
+            <dl class="foot_nav">
+                <dt class="foot_hellp"><a href="#">用户帮助</a></dt>
+                <dd><a href="#">常见团购问题</a></dd>
+                <dd><a href="#">关于百度糯米</a></dd>
+            </dl>
+            <dl class="foot_nav">
+                <dt class="foot_hellp"><a href="#">手机百度糯米</a></dt>
+                <dd><a href="#">常见团购问题</a></dd>
+                <dd><a href="#">关于百度糯米</a></dd>
+                <dd><a href="#">人人网公共主页</a></dd> 
+            </dl>
+            <dl class="foot_nav">
+                <dt class="foot_hellp"><a href="#">商务合作</a></dt>
+                <dd><a href="#">常见团购问题</a></dd>
+                <dd><a href="#">关于百度糯米</a></dd>
+                <dd><a href="#">人人网公共主页</a></dd>
+                <dd><a href="#">百度糯米新浪微博</a></dd>
+            </dl>
+            <dl class="foot_nav">
+                <dt class="foot_hellp"><a href="#">公司信息</a></dt>
+                <dd><a href="#">常见团购问题</a></dd>
+                <dd><a href="#">关于百度糯米</a></dd>
+                <dd><a href="#">人人网公共主页</a></dd>
+                <dd><a href="#">百度糯米新浪微博</a></dd>
+            </dl>
+            <div class="foot_kefu">
+                <p class="foot_dh">
+                    4006-888-887
+                </p>
+                <p class="foot_kfsj">
+                    客户电话 免费长途 周一至周日 9:00-22:00
+                </p>
+                <div class="foot_shouji">
+                    <div class="foot_linr">
+                        <p class="foot_sjzx">手机专享优惠</p>
+                        <p class="foot_ssj">百度糯米卷随身</p>
+                        <p class="foot_xh">
+                            <a href="#">iphone|</a><a href="#">Android|</a><a href="#">ipad|</a><a href="#">更多</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot_bqtu">
+            <div class="foot_banquan clearfix">
+                <div class="foot_zf_tu">
+                    <a href="#"><img src="img/syj_zfb.png" /></a>
+                </div>
+                <div class="foot_rz_tu">
+                    <a href="#"><img src="img/syj_rz.png" /></a>
+                </div>
+                <div class="foot_cx_tu">
+                    <a href="#"><img src="img/syj_xrzm.png" /></a>
+                </div>        
+            </div>
+            <p class="foot_beian">
+                京icp备：智能社备：各种备案。。此次备案全程通过
+            </p>
+        </div>
+    </div>
+<!---------------------------尾部结束------------------------------->
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
